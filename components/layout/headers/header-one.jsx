@@ -9,6 +9,8 @@ import SideBar from './offcanvas';
 import MobileMenuOne from './menu_sidebar/menu-one';
 import logo1 from "../../../public/assets/img/logo-1.png";
 import logo2 from "../../../public/assets/img/logo-5.jpeg";
+import g20Logo from "../../../public/assets/img/g20_1.png";
+
 
 const HeaderOne = ({variant}) => {
     const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -80,9 +82,10 @@ const HeaderOne = ({variant}) => {
                                         <i className="flaticon-menu"></i>                          
                                     </div>
                                 </div>
-                                {/* <div className="header__area-menubar-right-box-btn">
-                                <Link className="btn-one" href="/request-quote">Request quote<i className="far fa-chevron-double-right"></i></Link>
-                                </div> */}
+                                <div className="header__area-menubar-right-box-btn">
+                                    {/* <Link className="btn-one" href="/request-quote">Request quote<i className="far fa-chevron-double-right"></i></Link> */}
+                                    <img src={g20Logo.src} alt="G20 Logo" width={50} />
+                                </div>
                                 <div className="header__area-menubar-right-responsive-menu menu__bar">
                                     <i className="flaticon-menu" onClick={() => setMenuSidebar(true)}></i>
                                 </div>
