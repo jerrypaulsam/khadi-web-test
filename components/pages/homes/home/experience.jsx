@@ -7,7 +7,7 @@ import SkillBarItem from "../../common/skill-bar";
 const Experience = () => {
     const experienceContent = {
         subtitle: 'Our Showrooms',
-        title: 'Find your dream Aparels.',
+        title: 'Find your dream Apparels.',
         des: 'Discover beautiful, handwoven khadi textiles in Kerala! Find authentic clothing, homeware, and more at government-run Khadi Gramodyog Bhavan showrooms or Kerala Khadi & Village Industries Board locations. Support local artisans and experience the rich heritage of Kerala khadi.',
         btn_text: 'View Showrooms',
         btn_link: '#',

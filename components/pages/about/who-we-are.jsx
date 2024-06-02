@@ -15,7 +15,7 @@ const WhoWeAre = () => {
                             <div className="company__two-left">
                                 <div className="company__two-left-title">
                                     <span className="subtitle-one">Our Showrooms</span>
-                                    <h2>Find your dream dress in our showrooms.</h2>
+                                    <h2>Find your dream Apparels.</h2>
                                     <p>Discover beautiful, handwoven khadi textiles in Kerala! Find authentic clothing, homeware, and more at government-run Khadi Gramodyog Bhavan showrooms or Kerala Khadi & Village Industries Board locations. Support local artisans and experience the rich heritage of Kerala khadi.</p>
                                 </div>
                                 <div className="company__two-left-skill">
