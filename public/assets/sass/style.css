@@ -4580,18 +4580,19 @@ Banner One CSS
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  z-index: 1;
+  z-index: -1;
 }
 .banner__one-image::after {
   content: "";
   position: absolute;
-  background-image: url("../../assets/img/shape/banner-bg.png"); /* remove this by updating the banner image to properly view the texts */
+  background-image: url("../../assets/img/shape/banner-bg.png"); 
+  /* remove this by updating the banner image to properly view the texts */
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
   left: 0;
   top: 0;
-  z-index: -1;
+  z-index: 1;
 }
 .banner__one-content {
   position: relative;
@@ -5177,8 +5178,8 @@ Banner Four CSS
 }
 @media (max-width: 991px) {
   .banner__one-image::after {
-    left: 0;
-    width: 100%;
+    /* left: 0; */
+    width: 0%; /* was 100%*/
     background: var(--bg-heading-color);
   }
 }
@@ -10182,7 +10183,7 @@ Contact Page CSS
   color: var(--primary-color-1);
 }
 .contact__page-map {
-  margin-top: -180px;
+  margin-top: 20px;
   margin-bottom: -130px;
   z-index: 1;
   position: relative;

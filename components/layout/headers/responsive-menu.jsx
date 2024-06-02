@@ -62,7 +62,7 @@ const ResponsiveMenu = () => {
 
                 <li className='menu-item-has-children'><Link href='#'>Village Industries</Link>
                     <ul className='sub-menu' style={activeSubMenu("village")}>
-                        <li><Link href='/portfolio-filter'>Village Industries Program</Link></li>
+                        <li><Link href='/'>Village Industries Program</Link></li>
                         <li><Link href='/'>SEGP Guidelines</Link></li>
                         <li><Link href='/'>Departmental Village Industrial Units</Link></li>
                     </ul>

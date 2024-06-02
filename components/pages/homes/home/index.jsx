@@ -24,7 +24,7 @@ const HomeOne = () => {
             <CtaArea /> */}
             <Experience />
             <Portfolio />
-            <Testimonial />
+            {/* <Testimonial /> */}
             {/* <GetInTouch /> */}
             {/* <Blog /> */}
             <FooterOne />

@@ -10,7 +10,7 @@ const FooterOne = () => {
     return (
         <>
             <div className="footer__one">
-                <img className="footer__one-shape" src="assets/img/shape/footer-bg.png" alt="Kerala Khadi" />
+                <img className="footer__one-shape" src="/assets/img/shape/footer-bg.png" alt="Kerala Khadi" />
                 <div className="container">
                     <div className="row">
                         <div className="col-xl-3 col-md-6 col-sm-7 xl-mb-30">
@@ -31,7 +31,8 @@ const FooterOne = () => {
                                     <ul>
                                         <li><Link href="/"><i className="far fa-chevron-double-right"></i>Tender Notice</Link></li>     
                                         <li><Link href="/"><i className="far fa-chevron-double-right"></i>Downloads</Link></li>
-                                        <li><Link href="/"><i className="far fa-chevron-double-right"></i>Acts & Rules</Link></li>                             
+                                        <li><Link href="/"><i className="far fa-chevron-double-right"></i>Acts & Rules</Link></li>           
+                                        <li><Link href="/en/contact"><i className="far fa-chevron-double-right"></i>Contact Us</Link></li>                    
                                     </ul>
                                 </div>
                             </div>
