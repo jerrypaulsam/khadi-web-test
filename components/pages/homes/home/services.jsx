@@ -5,8 +5,8 @@ import servicesData from '@/components/data/services-data';
 const Services = () => {
     const servicesItem = servicesData.slice(0, 2);
     const servicesContent = {
-        subtitle: 'Our Schemes',
-        title: 'Check out our various schemes',
+        subtitle: 'Our Programs',
+        title: '',
         btn_text: 'Schemes',
         btn_link: '#'
     }
