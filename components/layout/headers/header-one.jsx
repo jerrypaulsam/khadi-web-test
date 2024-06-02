@@ -34,12 +34,12 @@ const HeaderOne = ({variant}) => {
                                 <Link href="https://maps.app.goo.gl/qdDud15AoVnWiDAy9" target='_blank' ><i className="far fa-map-marker-alt"></i>Vanchiyoor, Trivandrum - 695035</Link>
                             </div>
                         </div>
-                        <div className="col-xl-7 col-md-6">
+                        <div className="col-xl-7 ">
                             <div className="top__bar-right" style={{ display: 'flex', alignItems: 'center' }}> 
-                                <Link href="tel:0471-2471694"><i className="fas fa-phone"></i>0471-2471694</Link>
+                                <Link href="tel:0471-2471694" ><i className="fas fa-phone" ></i>0471-2471694</Link>
                                 <Link href="mailto:secretary@kkvib.org"><i className="fas fa-envelope ml-10"></i>secretary@kkvib.org</Link>
-                                <div className="top__bar-right-social">
-                                    <Social />
+                                <div className="top__bar-right-social d-none d-sm-block">
+                                    <Social /> 
                                 </div>
                             </div>
                         </div>
