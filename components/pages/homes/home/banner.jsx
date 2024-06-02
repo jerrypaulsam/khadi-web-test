@@ -40,7 +40,7 @@ const BannerOne = () => {
                                         <h1>Embrace Tradition</h1>
                                         <div className="banner__one-content-button">
                                             <div className="banner__one-content-button-item">
-                                                <Link className="btn-one" href="/en/about">About Us<i className="far fa-chevron-double-right"></i></Link>
+                                                <Link className="btn-one" href="/en/about-us">About Us<i className="far fa-chevron-double-right"></i></Link>
                                             </div>
                                             <div className="banner__one-content-video-icon">
                                                 <span onClick={openVideoModal}><i className="fas fa-play"></i></span>
@@ -62,7 +62,7 @@ const BannerOne = () => {
                                         <h1>Stories behind every fabric</h1>
                                         <div className="banner__one-content-button">
                                             <div className="banner__one-content-button-item">
-                                                <Link className="btn-one" href="/about">Read More<i className="far fa-chevron-double-right"></i></Link>
+                                                <Link className="btn-one" href="/en/about-us">Read More<i className="far fa-chevron-double-right"></i></Link>
                                             </div> 
                                             {/* <div className="banner__one-content-video-icon">
                                                 <span onClick={openVideoModal}><i className="fas fa-play"></i></span>
