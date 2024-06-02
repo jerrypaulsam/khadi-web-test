@@ -6,7 +6,7 @@ const Services = () => {
     const servicesItem = servicesData.slice(0, 2);
     const servicesContent = {
         subtitle: 'Our Programs',
-        title: '',
+        title: 'Schemes & Programs',
         btn_text: 'Schemes',
         btn_link: '#'
     }
