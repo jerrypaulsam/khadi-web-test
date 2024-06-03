@@ -43,35 +43,35 @@ const Schemes = () => {
                                         </tr>
                                         <tr>
                                             <td className="schemes-table-title">Popularisation of Khadi</td>
-                                            <td className="schemes-table-text"><Link href="#">View</Link></td>
+                                            <td className="schemes-table-text"><Link href="/en/about-us/schemes/popularisation-of-khadi">View</Link></td>
                                         </tr>
                                         <tr>
                                             <td className="schemes-table-title">Khadi Uniform</td>
-                                            <td className="schemes-table-text"><Link href="#">View</Link></td>
+                                            <td className="schemes-table-text"><Link href="/en/about-us/schemes/khadi-uniform">View</Link></td>
                                         </tr>
                                         <tr>
                                             <td className="schemes-table-title">Special Employment Generation Programme</td>
-                                            <td className="schemes-table-text"><Link href="#">View</Link></td>
+                                            <td className="schemes-table-text"><Link href="/en/about-us/schemes/special-employment-generation-program">View</Link></td>
                                         </tr>
                                         <tr>
                                             <td className="schemes-table-title">Keralam Then Kalavara Project</td>
-                                            <td className="schemes-table-text"><Link href="#">View</Link></td>
+                                            <td className="schemes-table-text"><Link href="/en/about-us/schemes/">View</Link></td>
                                         </tr>
                                         <tr>
                                             <td className="schemes-table-title">Flagship Programmes</td>
-                                            <td className="schemes-table-text"><Link href="#">View</Link></td>
+                                            <td className="schemes-table-text"><Link href="/en/about-us/schemes/">View</Link></td>
                                         </tr>
                                         <tr>
                                             <td className="schemes-table-title">Rural Industries Service Centres (RISC)</td>
-                                            <td className="schemes-table-text"><Link href="#">View</Link></td>
+                                            <td className="schemes-table-text"><Link href="/en/about-us/schemes/">View</Link></td>
                                         </tr>
                                         <tr>
                                             <td className="schemes-table-title">PRODIP</td>
-                                            <td className="schemes-table-text"><Link href="#">View</Link></td>
+                                            <td className="schemes-table-text"><Link href="/en/about-us/schemes/">View</Link></td>
                                         </tr>
                                         <tr>
                                             <td className="schemes-table-title">SFRUTI</td>
-                                            <td className="schemes-table-text"><Link href="#">View</Link></td>
+                                            <td className="schemes-table-text"><Link href="/en/about-us/schemes/">View</Link></td>
                                         </tr>
                                     </table>
 
