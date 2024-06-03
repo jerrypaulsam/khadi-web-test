@@ -23,10 +23,10 @@ const Experience = () => {
                             <div className="experience__area-image">
                                 <img className="experience__area-image-shape left-right-animate" src="assets/img/shape/dots.png" alt="Kerala Khadi Board" />
                                 <div className="experience__area-image-item">
-                                    <img src={image1.src} alt="image" />
+                                    <img src={image1.src} alt="image" style={{borderRadius: "5px"}} />
                                 </div>
                                 <div className="experience__area-image-item mt-65">
-                                    <img src={image2.src} alt="image" />
+                                    <img src={image2.src} alt="image" style={{borderRadius: "5px"}} />
                                 </div>
                             </div>
                         </div>

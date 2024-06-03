@@ -27,8 +27,8 @@ const About = () => {
                     <div className="col-xl-6 col-lg-6 lg-mb-30">
                         <div className="about__one-left">
                             <div className="about__one-left-image">
-                                <img className="one" src={image1.src} alt="about-image" />
-                                <img className="two" src={image2.src} alt="about-image" />
+                                <img className="one" src={image1.src} alt="about-image" style={{borderRadius: "5px"}} />
+                                <img className="two" src={image2.src} alt="about-image" style={{borderRadius: "5px"}} />
                             </div>
                             <div className="about__one-left-experience">
                                 <h1><Count number={aboutData?.count}/>+</h1>

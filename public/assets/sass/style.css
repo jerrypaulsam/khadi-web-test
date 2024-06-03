@@ -5373,6 +5373,23 @@ About One CSS
   text-align: center;
 }
 
+.officals-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.officals-table th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}
+.officals-table th {
+  background-color: #f2f2f2;
+  font-weight: bolder !important;
+}
+.officals-table th, td {
+  font-size: 14px;
+}
+
 /*==========================================================================
 About Two CSS
 ==========================================================================*/

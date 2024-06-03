@@ -52,8 +52,8 @@ const FooterOne = () => {
                                     </div>
                                     {/* <h6>Branch Office</h6> */}
                                     <div className="footer__one-widget-location-item mt-10">
-                                        <Link href="https://kerala.gov.in"><img src={govLogo.src} alt="Government Of Kerala" /></Link>
-                                        <Link href="https://keralaindustry.org"><img src={industriesLogo.src} alt="Dept. Of Industries & Commerce" /></Link>
+                                        <Link href="https://kerala.gov.in" target='_blank'><img src={govLogo.src} alt="Government Of Kerala" /></Link>
+                                        <Link href="https://keralaindustry.org" target='_blank'><img src={industriesLogo.src} alt="Dept. Of Industries & Commerce" /></Link>
 
                                     </div>
                                 </div>

@@ -12,11 +12,11 @@ const MainMenu = () => {
                         <li><Link href='/en/about-us/objectives'>Objectives</Link></li>
                         <li><Link href='/en/about-us/schemes'>Our Schemes</Link></li>
                         <li><Link href='/'>Citizen's Charter</Link></li>
-                        <li><Link href='/'>Acts & Rules</Link></li>
+                        <li><Link href='/en/acts-rules'>Acts & Rules</Link></li>
                         <li><Link href='/'>Organization Structure</Link></li>
                         <li><Link href='/'>Board Members</Link></li>
-                        <li><Link href='/'>Important Officials</Link></li> 
-                        <li><Link href='/'>Project Officers</Link></li>
+                        <li><Link href='/en/important-officials'>Important Officials</Link></li> 
+                        <li><Link href='/en/project-officers'>Project Officers</Link></li>
                         <li className='menu-item-has-children'><Link href='#'>Marketing</Link>
                             <ul className='sub-menu'>
                                 <li><Link href='/'>Kerala Khadi Grama Soubhagyas</Link></li>

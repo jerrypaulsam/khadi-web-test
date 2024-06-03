@@ -30,7 +30,7 @@ const Services = () => {
                             <div className="services__one-item">
                                 <div className="services__one-item-icon">
                                     {/* {data.icon} */}
-                                    <img src={data.image.src} alt="Kerala Khadi" />
+                                    <img src={data.image.src} style={{borderRadius: "5px"}} alt="Kerala Khadi" />
                                 </div>
                                 <h4 style={{textAlign: "center"}}><Link href="#">{data.title}</Link></h4>
                                 {/* <p>{data.description}</p> */}

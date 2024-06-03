@@ -48,7 +48,7 @@ const Portfolio = () => {
                             {portfolioItem?.map((data, id) => (
                                 <SwiperSlide key={id}>
                                     <div className="portfolio__area-item swiper-slide">
-                                        <img src={data.image.src} alt="image" />
+                                        <img src={data.image.src} alt="image" style={{borderRadius: "5px"}} />
                                         <div className="portfolio__area-item-content">
                                             <div className="portfolio__area-item-content-title">
                                                 <h4>{data.title}</h4>
