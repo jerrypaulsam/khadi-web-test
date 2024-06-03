@@ -19,9 +19,9 @@ const ResponsiveMenu = () => {
             <ul>
                 <li className='menu-item-has-children'><Link href=''>About</Link>
                     <ul className='sub-menu' style={activeSubMenu("home")}>
-                        <li><Link href='/'>Mission & Vision</Link></li>
-                        <li><Link href='/'>Objectives</Link></li>
-                        <li><Link href='/'>Our Schemes</Link></li>
+                        <li><Link href='/en/about-us/mission'>Mission & Vision</Link></li>
+                        <li><Link href='/en/about-us/objectives'>Objectives</Link></li>
+                        <li><Link href='/en/about-us/schemes'>Our Schemes</Link></li>
                         <li><Link href='/'>Citizen's Charter</Link></li>
                         <li><Link href='/'>Acts & Rules</Link></li>
                         <li><Link href='/'>Organization Structure</Link></li>

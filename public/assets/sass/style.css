@@ -5354,6 +5354,25 @@ About One CSS
   color: var(--text-white);
 }
 
+/* For Schemes table */
+.schemes-table {
+  width: 100%; 
+  border-collapse: collapse;
+}
+.schemes-table-title {
+  padding: 10px; 
+  border: 1px solid #000; 
+  font-size: 14pt;
+}
+
+.schemes-table-text {
+  padding: 10px; 
+  border: 1px solid #000; 
+  font-size: 12pt;
+  font-weight: bold;
+  text-align: center;
+}
+
 /*==========================================================================
 About Two CSS
 ==========================================================================*/
