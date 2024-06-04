@@ -19,7 +19,7 @@ const About = () => {
         description: 'Kerala Khadi and Village Industries Board is a statutory body constituted by the Act 9 of 1957, vested with the responsibility of organizing and promoting Khadi and Village Industries in the State. The Board implements the programmes through co-operative, registered institutions, individuals and departmental units by imparting/ availing assistance from Government of Kerala, Khadi Commission and Nationalized Banks.',
         author_name: 'Dr. K A Ratheesh',
         author_sub: 'Secretary',
-        minister_name: 'Shri. P Rajeeve',
+        minister_name: 'Shri. P Rajeev',
         minister_sub: 'Chairman',
         btn_title: 'More',
         btn_link: '/en/about-us'
