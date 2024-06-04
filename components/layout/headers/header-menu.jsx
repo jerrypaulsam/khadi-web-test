@@ -19,9 +19,9 @@ const MainMenu = () => {
                         <li><Link href='/en/project-officers'>Project Officers</Link></li>
                         <li className='menu-item-has-children'><Link href='#'>Marketing</Link>
                             <ul className='sub-menu'>
-                                <li><Link href='/'>Kerala Khadi Grama Soubhagyas</Link></li>
-                                <li><Link href='/'>Sales Performance</Link></li>
-                                <li><Link href='/'>Rebates on Retail Sale</Link></li>
+                                <li><Link href='/en/marketing/khadi-grama-soubhagyas'>Kerala Khadi Grama Soubhagyas</Link></li>
+                                <li><Link href='#'>Sales Performance</Link></li>
+                                <li><Link href='/en/marketing/rebate-on-retail-sale-on-khadi'>Rebates on Retail Sale</Link></li>
                             </ul>
                         </li>
                         <li className='menu-item-has-children'><Link href='#'>RTI Act</Link>

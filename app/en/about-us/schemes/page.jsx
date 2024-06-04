@@ -59,19 +59,19 @@ const Schemes = () => {
                                         </tr>
                                         <tr>
                                             <td className="schemes-table-title">Flagship Programmes</td>
-                                            <td className="schemes-table-text"><Link href="/en/about-us/schemes/">View</Link></td>
+                                            <td className="schemes-table-text"><Link href="/en/about-us/schemes/flagship-programs">View</Link></td>
                                         </tr>
                                         <tr>
                                             <td className="schemes-table-title">Rural Industries Service Centres (RISC)</td>
-                                            <td className="schemes-table-text"><Link href="/en/about-us/schemes/">View</Link></td>
+                                            <td className="schemes-table-text"><Link href="/en/about-us/schemes/rural-industries-service-centres">View</Link></td>
                                         </tr>
                                         <tr>
                                             <td className="schemes-table-title">PRODIP</td>
-                                            <td className="schemes-table-text"><Link href="/en/about-us/schemes/">View</Link></td>
+                                            <td className="schemes-table-text"><Link href="/en/about-us/schemes/prodip">View</Link></td>
                                         </tr>
                                         <tr>
                                             <td className="schemes-table-title">SFRUTI</td>
-                                            <td className="schemes-table-text"><Link href="/en/about-us/schemes/">View</Link></td>
+                                            <td className="schemes-table-text"><Link href="/en/about-us/schemes/sfruti">View</Link></td>
                                         </tr>
                                     </table>
 
