@@ -22,7 +22,7 @@ const slideControl = {
 };
 
 const BannerOne = () => {
-    const [openVideo, setOpenVideo] = useState(false);
+    const [openVideo, setOpenVideo] = useState(true);
     const openVideoModal = () => {
       setOpenVideo(true);
     }; 
