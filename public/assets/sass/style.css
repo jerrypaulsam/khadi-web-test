@@ -705,7 +705,7 @@ Conbix Text Style CSS
 .text-one {
   font-family: var(--heading-font);
   font-weight: 700;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 28px;
   text-transform: capitalize;
   color: var(--text-heading-color);
