@@ -52,11 +52,11 @@ const MainMenu = () => {
                 </li>
                 <li className='menu-item-has-children'><Link href='#'>PMEGP</Link>
                     <ul className='sub-menu'>
-                        <li><Link href='/'>About the Scheme</Link></li>
-                        <li><Link href='/'>List of Industries</Link></li>
-                        <li><Link href='/'>FAQ</Link></li>
-                        <li><Link href='/'>Application Form</Link></li>
-                        <li><Link href='/'>Performance</Link></li>
+                        <li><Link href='/en/pmegp/about-scheme'>About the Scheme</Link></li>
+                        <li><Link href='/en/pmegp/list-of-industries'>List of Industries</Link></li>
+                        <li><Link href='/en/pmegp/faq'>FAQ</Link></li>
+                        <li><Link href='#'>Application Form</Link></li>
+                        <li><Link href='/en/pmegp/performance'>Performance</Link></li>
                     </ul>
                 </li>
 
