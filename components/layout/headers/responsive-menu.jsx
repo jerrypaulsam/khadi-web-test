@@ -48,13 +48,13 @@ const ResponsiveMenu = () => {
 
                 <li className='menu-item-has-children'><Link href='#'>Khadi</Link>
                     <ul className='sub-menu' style={activeSubMenu("pages")}>
-                        <li><Link href='/en/about-us'>Khadi Program</Link></li>
-                        <li><Link href='/'>Welfare Measures</Link></li>
+                        <li><Link href='/en/khadi/khadi-program'>Khadi Program</Link></li>
+                        <li><Link href='/en/khadi/welfare-measures'>Welfare Measures</Link></li>
                         <li><Link href='/'>Departmental Units</Link></li>
-                        <li><Link href='/'>Khadi Institutions</Link></li>
+                        <li><Link href='/en/khadi/details-of-the-khadi-institutions'>Khadi Institutions</Link></li>
                         <li><Link href='/'>Performance</Link></li>
                         <li><Link href='/'>Workers Welfare Fund Board</Link></li>
-                        <li><Link href='/'>Work Study Report</Link></li>
+                        {/* <li><Link href='/'>Work Study Report</Link></li> */}
                     </ul>
                     <a className={`mean-expand ${activeIcon("pages")}`} onClick={() => active("pages")}></a>
 
@@ -62,9 +62,9 @@ const ResponsiveMenu = () => {
 
                 <li className='menu-item-has-children'><Link href='#'>Village Industries</Link>
                     <ul className='sub-menu' style={activeSubMenu("village")}>
-                        <li><Link href='/'>Village Industries Program</Link></li>
-                        <li><Link href='/'>SEGP Guidelines</Link></li>
-                        <li><Link href='/'>Departmental Village Industrial Units</Link></li>
+                        <li><Link href='/en/village-industries/village-industries-program'>Village Industries Program</Link></li>
+                        <li><Link href='#'>SEGP Guidelines</Link></li>
+                        <li><Link href='/en/village-industries/departmental-village-industries-units'>Departmental Village Industrial Units</Link></li>
                     </ul>
                     <a className={`mean-expand ${activeIcon("village")}`} onClick={() => active("village")}></a>
                 </li>

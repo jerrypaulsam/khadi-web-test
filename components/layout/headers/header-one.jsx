@@ -84,7 +84,7 @@ const HeaderOne = ({variant}) => {
                                 </div>
                                 <div className="header__area-menubar-right-box-btn">
                                     {/* <Link className="btn-one" href="/request-quote">Request quote<i className="far fa-chevron-double-right"></i></Link> */}
-                                    <img src={g20Logo.src} alt="G20 Logo" width={50} />
+                                    <img src={g20Logo.src} alt="G20 Logo" width={70} />
                                 </div>
                                 <div className="header__area-menubar-right-responsive-menu menu__bar">
                                     <i className="flaticon-menu" onClick={() => setMenuSidebar(true)}></i>
