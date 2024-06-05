@@ -10,6 +10,7 @@ import MobileMenuOne from './menu_sidebar/menu-one';
 import logo1 from "../../../public/assets/img/logo-1.png";
 import logo2 from "../../../public/assets/img/logo-5.jpeg";
 import g20Logo from "../../../public/assets/img/g20_1.png";
+import LanguageTab from '@/components/pages/common/language-change';
 
 
 const HeaderOne = ({variant}) => {
@@ -17,6 +18,9 @@ const HeaderOne = ({variant}) => {
     const [menuSidebar, setMenuSidebar] = useState(false);
     const [search, setSearch] = useState(false);
     const [isSticky, setIsSticky] = useState(false);
+
+    // let router = useRouter();
+
     useEffect(() => {
         window.addEventListener("scroll", () => {
         if (window.scrollY > 150) {
@@ -26,6 +30,8 @@ const HeaderOne = ({variant}) => {
         }
         });
     }, []);
+
+
     return (
         <>
             <div className="top__bar">
@@ -43,6 +49,7 @@ const HeaderOne = ({variant}) => {
                                 <div className="top__bar-right-social d-none d-sm-block">
                                     <Social /> 
                                 </div>
+                                <LanguageTab  />
                             </div>
                         </div>
                     </div>
