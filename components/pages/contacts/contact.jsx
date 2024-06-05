@@ -48,10 +48,10 @@ const ContactUs = () => {
                         </div>
                         <div className="col-xl-7 col-lg-7 lg-mb-30">
                             <div className="contact__page-info">
-                                <h2 className="mb-60 lg-mb-30">Head Office</h2>
+                                <h3 className="mb-60 lg-mb-30">Head Office</h3>
                                 <div className="contact__page-info-item">
                                     <h6>Office Address<span>:</span></h6>
-                                    <span>Kerala Khadi and Village Industries Board
+                                    <span>Kerala Khadi and Village Industries Board,
                                         Vanchiyoor,
                                         Thiruvananthapuram.695035</span>
                                 </div>
@@ -72,6 +72,115 @@ const ContactUs = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div className="container">
+            <hr />
+
+                <table className="officals-table pt-10 mt-10 mb-20">
+                    <tr>
+                        <th>District Office</th>
+                        <th>Address</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                    </tr>
+                    <tr>
+                        <td>District Khadi and Village Industries Office</td>
+                        <td>Thiruvananthapuram Uppalam Road, Statue, Trivandrum 695 001</td>
+                        <td>0471-2472896</td>
+                        <td>potvm@kkvib.org</td>
+                    </tr>
+                    <tr>
+                        <td>District Khadi and Village Industries Office</td>
+                        <td>Kollam Karabala Junction, Kollam 691 001</td>
+                        <td>0474-2743587</td>
+                        <td>poklm@kkvib.org</td>
+                    </tr>
+                    <tr>
+                        <td>District Khadi and Village Industries Office</td>
+                        <td>Pathanamthitta Elanathoor P.O, Pathanamthitta 686 643</td>
+                        <td>0468-2362070</td>
+                        <td>popta@kkvib.org</td>
+                    </tr>
+                    <tr>
+                        <td>District Khadi and Village Industries Office</td>
+                        <td>Alappuzha Medical Collage Road, Alappuzha 688 001</td>
+                        <td>0477-2252341</td>
+                        <td>poalp@kkvib.org</td>
+                    </tr>
+                    <tr>
+                        <td>District Khadi and Village Industries Office</td>
+                        <td>Kottayam Near SNV Sadanam, Chelliyozhukkam Road, Kottayam 686 001</td>
+                        <td>0481-2560586</td>
+                        <td>poktm@kkvib.org</td>
+                    </tr>
+                    <tr>
+                        <td>District Khadi and Village Industries Office</td>
+                        <td>Idukki Pulimoottil Buildings, Idukki Road, Thopdupuzha 685 584</td>
+                        <td>04862-222344</td>
+                        <td>poidk@kkvib.org</td>
+                    </tr>
+                    <tr>
+                        <td>District Khadi and Village Industries Office</td>
+                        <td>Ernakulam Khadi Tower, Kaloor, Ernakulam 682 017</td>
+                        <td>0484-2339080</td>
+                        <td>poekm@kkvib.org</td>
+                    </tr>
+                    <tr>
+                        <td>District Khadi and Village Industries Office</td>
+                        <td>Thrissur Palace Road, Chempukavu, Thrissur 680 020</td>
+                        <td>0487-2338699</td>
+                        <td>potcr@kkvib.org</td>
+                    </tr>
+                    <tr>
+                        <td>District Khadi and Village Industries Office</td>
+                        <td>Palakkad West Fort, Palakkad 678 001</td>
+                        <td>0491-2534392</td>
+                        <td>popkd@kkvib.org</td>
+                    </tr>
+                    <tr>
+                        <td>District Khadi and Village Industries Office</td>
+                        <td>Malappuram Downhill, Malappuram 676 519</td>
+                        <td>0483-2734807</td>
+                        <td>pomlp@kkvib.org</td>
+                    </tr>
+                    <tr>
+                        <td>District Khadi and V.I. Office</td>
+                        <td>Kozhikkode Cherootty Road, Kozhikkode 673 032</td>
+                        <td>0495-2366156</td>
+                        <td>pokzd@kkvib.org</td>
+                    </tr>
+                    <tr>
+                        <td>District Khadi and Village Industries Office</td>
+                        <td>Wayanad Kalpetta, Wayanad 673 121</td>
+                        <td>04936-202602</td>
+                        <td>pownd@kkvib.org</td>
+                    </tr>
+                    <tr>
+                        <td>District Khadi and Village Industries Office</td>
+                        <td>Kannur Near Civil Station, Kannur 670 002</td>
+                        <td>0497-2700057</td>
+                        <td>poknr@kkvib.org</td>
+                    </tr>
+                    <tr>
+                        <td>District Khadi and V.I. Office</td>
+                        <td>Kasaragode Ram Nagar, Anandasramam.P.O Kasaragod 671 531</td>
+                        <td>0467-2200585</td>
+                        <td>poksd@kkvib.org</td>
+                    </tr>
+                    <tr>
+                        <td>Payyannur Khadi Centre</td>
+                        <td>Payyannur</td>
+                        <td>04985-202310, 202590</td>
+                        <td>dpkc@kkvib.org</td>
+                    </tr>
+                    <tr>
+                        <td>Project Manager Central Sliver Plant</td>
+                        <td>Ettukudukka (Via) Karivelloor Kannur 670 521</td>
+                        <td>04985-280280</td>
+                        <td>pmcpu@kkvib.org</td>
+                    </tr>
+                </table>
             </div>
 
             <div className="contact__page-map">
