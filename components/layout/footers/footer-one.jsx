@@ -29,9 +29,10 @@ const FooterOne = () => {
                                 <h4>More Info</h4>
                                 <div className="footer__one-widget-solution">
                                     <ul>
-                                        <li><Link href="/"><i className="far fa-chevron-double-right"></i>Tender Notice</Link></li>     
-                                        <li><Link href="/"><i className="far fa-chevron-double-right"></i>Downloads</Link></li>
-                                        <li><Link href="/"><i className="far fa-chevron-double-right"></i>Acts & Rules</Link></li>           
+                                        <li><Link href="#"><i className="far fa-chevron-double-right"></i>Tender Notice</Link></li>     
+                                        <li><Link href="#"><i className="far fa-chevron-double-right"></i>Downloads</Link></li>
+                                        <li><Link href="#"><i className="far fa-chevron-double-right"></i>Acts & Rules</Link></li>   
+                                        <li><Link href="/en/gallery"><i className="far fa-chevron-double-right"></i>Photo Gallery</Link></li>          
                                         <li><Link href="/en/contact"><i className="far fa-chevron-double-right"></i>Contact Us</Link></li>                    
                                     </ul>
                                 </div>

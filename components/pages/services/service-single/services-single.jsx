@@ -4,6 +4,7 @@ import servicesData from '@/components/data/services-data';
 
 const ServicesSingleMain = ({serviceDetails}) => {
     const servicesD = servicesData.slice(0, 5);
+    
     return (
         <>
             <div className="services__details section-padding">
