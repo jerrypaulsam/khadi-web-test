@@ -19,9 +19,17 @@ const HeaderOne = ({variant}) => {
     const [search, setSearch] = useState(false);
     const [isSticky, setIsSticky] = useState(false);
 
+    const [isMalayalam, setIsMalayalam] = useState(false);
     // let router = useRouter();
 
     useEffect(() => {
+        let language = localStorage.getItem("language");
+        if ((language === null && language === undefined) || language === "eng") {
+            setIsMalayalam(false)
+        } else {
+            setIsMalayalam(true)
+        }
+
         window.addEventListener("scroll", () => {
         if (window.scrollY > 150) {
             setIsSticky(true);
@@ -29,7 +37,7 @@ const HeaderOne = ({variant}) => {
             setIsSticky(false);
         }
         });
-    }, []);
+    }, [isMalayalam]);
 
 
     return (
@@ -39,7 +47,8 @@ const HeaderOne = ({variant}) => {
                     <div className="row">
                         <div className="col-xl-5 col-md-6">
                             <div className="top__bar-left">
-                                <Link href="https://maps.app.goo.gl/qdDud15AoVnWiDAy9" target='_blank' ><i className="far fa-map-marker-alt"></i>Vanchiyoor, Trivandrum - 695035</Link>
+                                <Link href="https://maps.app.goo.gl/qdDud15AoVnWiDAy9" target='_blank' ><i className="far fa-map-marker-alt"></i>{
+                                    isMalayalam ? "വഞ്ചിയൂർ, തിരുവനന്തപുരം - 695035" : "Vanchiyoor, Trivandrum - 695035"}</Link>
                             </div>
                         </div>
                         <div className="col-xl-7 ">
@@ -62,16 +71,16 @@ const HeaderOne = ({variant}) => {
                             <div className="header__area-menubar-left-logo">
                                 <Link href='/' style={{ display: 'flex', alignItems: 'center' }}>
                                     <img className='dark-n' src={logo2.src} alt='Kerala Khadi & Village Industries Board' />
-                                    <h1 className='dark-n' style={{fontSize: "15px", marginLeft: "7px"}}>Kerala Khadi & Village Industries Board</h1>
+                                    <h1 className='dark-n' style={{fontSize: isMalayalam ? "9px" : "15px", marginLeft: "7px"}}>{isMalayalam ? "കേരള ഖാദി & വില്ലേജ് ഇൻഡസ്ട്രീസ് ബോർഡ്" : "Kerala Khadi & Village Industries Board"}</h1>
                                     
                                     <img className="light-n" src={logo2.src} alt="Kerala Khadi & Village Industries Board" /> 
-                                    <h1 className='light-n' style={{fontSize: "15px", marginLeft: "7px"}}>Kerala Khadi & Village Industries Board</h1>
+                                    <h1 className='light-n' style={{fontSize: isMalayalam ? "9px" : "15px", marginLeft: "7px"}}>{isMalayalam ? "കേരള ഖാദി & വില്ലേജ് ഇൻഡസ്ട്രീസ് ബോർഡ്" : "Kerala Khadi & Village Industries Board"}</h1>
                                 </Link>
                             </div>
                         </div>
                         <div className="header__area-menubar-center">
                             <div className="header__area-menubar-center-menu menu-responsive">
-                                <MainMenu />                               
+                                <MainMenu isMalayalam={isMalayalam} />                               
                             </div>
                         </div>
                         <div className="header__area-menubar-right">

@@ -9,30 +9,33 @@ export default function LanguageTab() {
     const toggleMalayalam = () => {
         setIsMalayalam(true);
         localStorage.setItem("language", "mal");
-        const currentUrl = window.location.href;
-        const newUrl = currentUrl.replace('/en/', '/mal/');
-        console.log(newUrl);
+        // const currentUrl = window.location.href;
+        // const newUrl = currentUrl.replace('/en/', '/mal/');
+        // console.log(newUrl);
         handleLanguageChange("mal");
     };
     const toggleEnglish = () => {
         setIsMalayalam(false);
         localStorage.setItem("language", "eng");
-        const currentUrl = window.location.href;
-        const newUrl = currentUrl.replace('/mal/', '/en/');
-        console.log(newUrl);
+        // const currentUrl = window.location.href;
+        // const newUrl = currentUrl.replace('/mal/', '/en/');
+        // console.log(newUrl);
         handleLanguageChange("en");
     };
 
     useEffect(() => {
-        if (window.location.pathname.match("en")) {
-            setIsMalayalam(false);
-            localStorage.setItem("language", "eng");
-
-        } else if (window.location.pathname.match("mal")) {
-            setIsMalayalam(true);
-            localStorage.setItem("language", "mal");
+        if (localStorage !== null || localStorage !== undefined) {
+            if (window.location.pathname.match("en")) {
+                setIsMalayalam(false);
+                localStorage.setItem("language", "eng");
+    
+            } else if (window.location.pathname.match("mal")) {
+                setIsMalayalam(true);
+                localStorage.setItem("language", "mal");
+            }
+    
         }
-
+        
         try {
             language = localStorage.getItem("language");
             if (language === null || language === "eng") {
@@ -56,7 +59,7 @@ export default function LanguageTab() {
         let newUrl;
         // Create the new URL
         const oldUrl = window.location.pathname;
-        if (language === "en") {
+        if (language === "mal") {
             newUrl = oldUrl.replace('/mal/', `/${language}/`);
         } else {
             newUrl = oldUrl.replace('/en/', `/${language}/`);
@@ -72,8 +75,8 @@ export default function LanguageTab() {
         <div className="ml-20">
             <ToggleButton
                 value={isMalayalam}
-                activeLabel={isMalayalam ? "Mal" : "Eng"}
-                inactiveLabel={isMalayalam ? "Mal" : "Eng"}
+                activeLabel={isMalayalam ? "മല" : "Eng"}
+                inactiveLabel={isMalayalam ? "മല" : "Eng"}
                 colors={{
                     activeThumb: {
                       base: '#F94C30',
@@ -84,10 +87,10 @@ export default function LanguageTab() {
                   }}
                 onToggle={(value) => {
                     if (isMalayalam) {
-                        value = true;
+                        // value = true;
                         toggleEnglish();
                     } else {
-                        value = false;
+                        // value = false;
                         toggleMalayalam();
                     }
                 }} 

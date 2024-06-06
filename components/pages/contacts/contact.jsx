@@ -86,7 +86,7 @@ const ContactUs = () => {
                     </tr>
                     <tr>
                         <td>District Khadi and Village Industries Office</td>
-                        <td>Thiruvananthapuram Uppalam Road, Statue, Trivandrum 695 001</td>
+                        <td>Melathumel, Vattiyoorkavu P.O- 695013, Thiruvananthapuram</td>
                         <td>0471-2472896</td>
                         <td>potvm@kkvib.org</td>
                     </tr>

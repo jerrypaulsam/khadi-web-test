@@ -6,6 +6,8 @@ import image1 from "../../../../public/assets/img/about/abo-1.jpg";
 import image2 from "../../../../public/assets/img/about/abo-2.jpg";
 import avatar from "../../../../public/assets/img/avatar/secretary.jpeg";
 import avatar2 from "../../../../public/assets/img/avatar/rajeeve.jpg";
+import avatar3 from "../../../../public/assets/img/avatar/jayarajan.jpg";
+
 
 import Count from "../../common/count";
 import Link from "next/link";
@@ -21,6 +23,8 @@ const About = () => {
         author_sub: 'Secretary',
         minister_name: 'Shri. P Rajeev',
         minister_sub: 'Chairman',
+        vc_name: "Shri. P Jayarajan",
+        vc_sub: "Vice Chairman",
         btn_title: 'More',
         btn_link: '/en/about-us'
     }
@@ -47,14 +51,24 @@ const About = () => {
                                 <h2>{aboutData?.title}</h2>
                                 <p>{aboutData?.description}</p>
                             </div>
+                            <div className="about__one-right-btn-author mt-10 mb-20" style={{display: "flex", justifyContent: "center"}}>
+                                <div className="about__one-right-btn-author-avatar">
+                                    <img src={avatar2.src} alt={`Khadi Board - ${aboutData?.minister_name}`} />
+                                </div>
+                                <div className="about__one-right-btn-author-name">
+                                    <span className="text-one">{aboutData?.minister_name}</span>
+                                    <h6>{aboutData?.minister_sub}</h6>
+                                </div>
+                            </div>
+
                             <div className="about__one-right-btn" style={{display: "flex", justifyContent: "center"}}>
                                 <div className="about__one-right-btn-author">
                                     <div className="about__one-right-btn-author-avatar">
-                                        <img src={avatar2.src} alt={`Khadi Board - ${aboutData?.minister_name}`} />
+                                        <img src={avatar3.src} alt={`Khadi Board - ${aboutData?.vc_name}`} />
                                     </div>
                                     <div className="about__one-right-btn-author-name">
-                                        <span className="text-one">{aboutData?.minister_name}</span>
-                                        <h6>{aboutData?.minister_sub}</h6>
+                                        <span className="text-one">{aboutData?.vc_name}</span>
+                                        <h6>{aboutData?.vc_sub}</h6>
                                     </div>
                                 </div>
 
