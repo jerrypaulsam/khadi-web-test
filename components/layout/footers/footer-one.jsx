@@ -60,7 +60,7 @@ const FooterOne = () => {
                                         </div>
                                         <div className="footer__one-widget-location-item-info">
                                             <Link href="https://maps.app.goo.gl/qdDud15AoVnWiDAy9" target='_blank'>{isMalayalam ? "വഞ്ചിയൂർ, തിരുവനന്തപുരം - 695035" : "Vanchiyoor, Trivandrum - 695035"}</Link>
-                                            <Link href="tel:04712471696" >{isMalayalam ? "": "Phone"} : 0471-2471696</Link>, <Link href="tel:04712471695">0471-2471695</Link>
+                                            <Link href="tel:04712471696" >{isMalayalam ? "ഫോൺ": "Phone"} : 0471-2471696</Link>, <Link href="tel:04712471695">0471-2471695</Link>
                                         </div>
                                     </div>
                                     {/* <h6>Branch Office</h6> */}
@@ -76,7 +76,7 @@ const FooterOne = () => {
                             <div className="footer__one-widget border-one tow">
                                 <h4>Subscribe</h4>
                                 <div className="footer__one-widget-subscribe">
-                                    <p>Join over <span>1,00,000</span> people getting our emails</p>
+                                    <p>{isMalayalam ? "ഞങ്ങളുടെ ഇമെയിലുകൾ ലഭിക്കുന്ന" : "Join over "}<span>1,00,000</span> {isMalayalam ? "ആളുകളിൽ ചേരുക" : "people getting our emails"}</p>
                                     <form action="#">
                                         <input type="text" name="email" placeholder="Email Address" required />
                                         <button type="submit"><i className="fas fa-paper-plane"></i></button>
