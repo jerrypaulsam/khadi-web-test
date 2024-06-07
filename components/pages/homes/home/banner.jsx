@@ -21,7 +21,7 @@ const slideControl = {
     },
 };
 
-const BannerOne = () => {
+const BannerOne = ({ isMalayalam }) => {
     const [openVideo, setOpenVideo] = useState(true);
     const openVideoModal = () => {
       setOpenVideo(true);
@@ -36,11 +36,11 @@ const BannerOne = () => {
                             <div className="row">
                                 <div className="col-xl-12">
                                     <div className="banner__one-content"> 
-                                        <span>Kerala Khadi</span>
-                                        <h1>Embrace Tradition</h1>
+                                        <span>{isMalayalam ? "കേരള ഖാദി" : "Kerala Khadi"}</span>
+                                        <h1>{isMalayalam ? "പാരമ്പര്യം സ്വീകരിക്കുക" : "Embrace Tradition"}</h1>
                                         <div className="banner__one-content-button">
                                             <div className="banner__one-content-button-item">
-                                                <Link className="btn-one" href="/en/about-us">About Us<i className="far fa-chevron-double-right"></i></Link>
+                                                <Link className="btn-one" href={`/${isMalayalam ? "mal" : "en"}/about-us`}>{isMalayalam  ? "ബോർഡിനെക്കുറിച്ച്" : "About Us"}<i className="far fa-chevron-double-right"></i></Link>
                                             </div>
                                             <div className="banner__one-content-video-icon">
                                                 <span onClick={openVideoModal}><i className="fas fa-play"></i></span>
@@ -58,11 +58,11 @@ const BannerOne = () => {
                             <div className="row">
                                 <div className="col-xl-12">
                                     <div className="banner__one-content"> 
-                                        <span>Kerala Khadi</span>
-                                        <h1>Stories behind every fabric</h1>
+                                        <span>{isMalayalam ? "കേരള ഖാദി" : "Kerala Khadi"}</span>
+                                        <h1>{isMalayalam ? "എല്ലാ തുണിത്തരങ്ങൾക്കും പിന്നിലെ കഥകൾ" : "Stories behind every fabric"}</h1>
                                         <div className="banner__one-content-button">
                                             <div className="banner__one-content-button-item">
-                                                <Link className="btn-one" href="/en/about-us">Read More<i className="far fa-chevron-double-right"></i></Link>
+                                                <Link className="btn-one" href={`/${isMalayalam ? "mal" : "en"}/about-us`}>{isMalayalam ? "കൂടുതൽ വായിക്കുക" : "Read More"}<i className="far fa-chevron-double-right"></i></Link>
                                             </div> 
                                             {/* <div className="banner__one-content-video-icon">
                                                 <span onClick={openVideoModal}><i className="fas fa-play"></i></span>

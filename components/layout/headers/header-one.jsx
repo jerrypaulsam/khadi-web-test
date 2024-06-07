@@ -13,23 +13,16 @@ import g20Logo from "../../../public/assets/img/g20_1.png";
 import LanguageTab from '@/components/pages/common/language-change';
 
 
-const HeaderOne = ({variant}) => {
+const HeaderOne = ({ isMalayalam, variant }) => {
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const [menuSidebar, setMenuSidebar] = useState(false);
     const [search, setSearch] = useState(false);
     const [isSticky, setIsSticky] = useState(false);
 
-    const [isMalayalam, setIsMalayalam] = useState(false);
     // let router = useRouter();
 
     useEffect(() => {
-        let language = localStorage.getItem("language");
-        if ((language === null && language === undefined) || language === "eng") {
-            setIsMalayalam(false)
-        } else {
-            setIsMalayalam(true)
-        }
-
+       
         window.addEventListener("scroll", () => {
         if (window.scrollY > 150) {
             setIsSticky(true);
@@ -37,7 +30,7 @@ const HeaderOne = ({variant}) => {
             setIsSticky(false);
         }
         });
-    }, [isMalayalam]);
+    }, []);
 
 
     return (

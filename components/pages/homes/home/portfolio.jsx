@@ -29,7 +29,7 @@ const slideControl = {
     }
 };
 
-const Portfolio = () => {
+const Portfolio = ({ isMalayalam }) => {
 
     return (
         <div className="portfolio__area dark__image section-padding pb-0 overflow-hidden">
@@ -37,8 +37,8 @@ const Portfolio = () => {
                 <div className="row mb-60">
                     <div className="col-xl-12">
                         <div className="portfolio__area-title t-center">
-                            <span className="subtitle-one">Sneak Peaks</span>
-                            <h2>Kerala Khadi Glimpses</h2>
+                            <span className="subtitle-one">{isMalayalam ? "സ്നീക്ക് പീക്" : "Sneak Peaks"}</span>
+                            <h2>{isMalayalam ? "കേരള ഖാദി ചിത്രങ്ങൾ" : "Kerala Khadi Glimpses"}</h2>
                         </div>
                     </div>
                 </div>

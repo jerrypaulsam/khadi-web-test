@@ -2,13 +2,13 @@ import React from 'react';
 import Link from 'next/link';
 import servicesData from '@/components/data/services-data';
 
-const Services = () => {
+const Services = ({ isMalayalam }) => {
     const servicesItem = servicesData.slice(0, 2);
     const servicesContent = {
-        subtitle: 'Our Programs',
-        title: 'Schemes & Programs',
-        btn_text: 'Schemes',
-        btn_link: '#'
+        subtitle: isMalayalam ? 'ഞങ്ങളുടെ പ്രോഗ്രാമുകൾ' : 'Our Programs',
+        title: isMalayalam ? 'സ്കീമുകളും പ്രോഗ്രാമുകളും' : 'Schemes & Programs',
+        btn_text: isMalayalam ? '' : 'സ്കീമുകൾ',
+        btn_link: isMalayalam ? '#' : '#'
     }
     return ( 
         <div className="services__one section-padding pt-0">
@@ -17,7 +17,7 @@ const Services = () => {
                     <div className="col-xl-7 col-lg-8 lg-mb-30">
                         <div className="services__one-title lg-t-center">
                             <span className="subtitle-one">{servicesContent.subtitle}</span>
-                            <h2>{servicesContent.title}</h2>
+                            <h3>{servicesContent.title}</h3>
                         </div>
                     </div>
                     {/* <div className="col-xl-5 col-lg-4 t-right lg-t-center">
@@ -36,7 +36,7 @@ const Services = () => {
                                 {/* <p>{data.description}</p> */}
                                 
                                 {/* <Link className="simple-btn-2" href={`/services/${data.id}`}>Read More<i className="far fa-chevron-double-right"></i></Link> */}
-                                <Link className="simple-btn-2 mt-10" href="#">Read More<i className="far fa-chevron-double-right"></i></Link>
+                                <Link className="simple-btn-2 mt-10" href="#">{isMalayalam ? "വായിക്കുക" : "Read More"}<i className="far fa-chevron-double-right"></i></Link>
                             </div>
                         </div>
                     ))}

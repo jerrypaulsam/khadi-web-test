@@ -12,21 +12,22 @@ import avatar3 from "../../../../public/assets/img/avatar/jayarajan.jpg";
 import Count from "../../common/count";
 import Link from "next/link";
 
-const About = () => {
+const About = ( {isMalayalam} ) => {
     const aboutData = {
         count: 67,
-        exp: 'Years of Khadi Tradition',
-        subtitle: 'About Khadi Board',
+        exp: isMalayalam ? 'വർഷത്തെ ഖാദി പാരമ്പര്യം ': 'Years of Khadi Tradition',
+        subtitle: isMalayalam ? 'ഖാദി ബോർഡിനെക്കുറിച്ച്' : 'About Khadi Board',
         title: '',
-        description: 'Kerala Khadi and Village Industries Board is a statutory body constituted by the Act 9 of 1957, vested with the responsibility of organizing and promoting Khadi and Village Industries in the State. The Board implements the programmes through co-operative, registered institutions, individuals and departmental units by imparting/ availing assistance from Government of Kerala, Khadi Commission and Nationalized Banks.',
-        author_name: 'Dr. K A Ratheesh',
-        author_sub: 'Secretary',
-        minister_name: 'Shri. P Rajeev',
-        minister_sub: 'Chairman',
-        vc_name: "Shri. P Jayarajan",
-        vc_sub: "Vice Chairman",
-        btn_title: 'More',
-        btn_link: '/en/about-us'
+        description: isMalayalam ? "കേരള ഗ്രാമവ്യവസായ ബോർഡ് എന്ന സ്റ്റാട്ട്യുട്ടറി സ്ഥാപനം 1957 ലെ ആക്ട് -9 പ്രകാരം രൂപീകരിച്ചിട്ടുള്ളതും സംസ്ഥാന ഖാദിയുടെയും ഗ്രാമവ്യവസായങ്ങളുടെയും ഏകോപനവും പ്രോത്സാഹനവും നടത്തുന്നതിൽ ചുമതലപ്പെട്ട സ്ഥാപനമാകുന്നു .കേരള ഗ്രാമവ്യവസായ ബോർഡ് ആയതിനുമേൽ ചുമതലപ്പെട്ട പദ്ധതികൾ ,സംഘങ്ങൾ ,രജിസ്റ്റർ ചെയ്ത മറ്റു സ്ഥാപനങ്ങൾ ,വ്യക്തികൾ തുടങ്ങിയവയിലൂടെയും വകുപ്പുതല യൂണിറ്റുകളുടെയും സംസ്ഥാന സർക്കാരിൻറെയും ഖാദി കമ്മീഷൻറെയും ദേശസാൽകൃത ബാങ്കുകളുടെയും സാമ്പത്തിക സഹായം നേടിക്കൊണ്ട് നടപ്പാക്കി വരുന്നു."
+         : 'Kerala Khadi and Village Industries Board is a statutory body constituted by the Act 9 of 1957, vested with the responsibility of organizing and promoting Khadi and Village Industries in the State. The Board implements the programmes through co-operative, registered institutions, individuals and departmental units by imparting/ availing assistance from Government of Kerala, Khadi Commission and Nationalized Banks.',
+        author_name: isMalayalam ? 'ഡോ. കെ. എ. രതീഷ്' : 'Dr. K A Ratheesh',
+        author_sub: isMalayalam ? 'സെക്രട്ടറി' : 'Secretary',
+        minister_name: isMalayalam ? 'ശ്രീ. പി രാജീവ്' : 'Shri. P Rajeev',
+        minister_sub: isMalayalam ? 'ചെയർമാൻ' : 'Chairman',
+        vc_name: isMalayalam ? "ശ്രീ. പി ജയരാജൻ" : "Shri. P Jayarajan",
+        vc_sub: isMalayalam ? "വൈസ് ചെയർമാൻ" : "Vice Chairman",
+        btn_title: isMalayalam ? 'കൂടുതൽ' : 'More',
+        btn_link: `/${isMalayalam ? "mal" : "en"}/about-us`
     }
     return (
         <div className="about__one dark__image section-padding">

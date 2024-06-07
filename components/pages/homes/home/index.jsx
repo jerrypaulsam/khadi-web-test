@@ -13,25 +13,37 @@ import Blog from "./blog";
 import FooterOne from "@/components/layout/footers/footer-one";
 import BannerOne from "./banner";
 import ScrollToTop from "../../common/scroll/scroll-to-top";
+import { useEffect, useState } from 'react';
 
 
 
 const HomeOne = () => {
 
+    const [isMalayalam, setIsMalayalam] = useState(false);
+
+    useEffect(() => {
+        let language = localStorage.getItem("language");
+        if ((language === null && language === undefined) || language === "eng") {
+            setIsMalayalam(false)
+        } else {
+            setIsMalayalam(true)
+        }
+
+    }, [isMalayalam]);
     return (
         <div>
             <SEO pageTitle='Kerala Khadi & Village Industries Board' />
-            <HeaderOne />
-            <BannerOne />
-            <About />
-            <Services />
+            <HeaderOne isMalayalam={isMalayalam} />
+            <BannerOne isMalayalam={isMalayalam} />
+            <About isMalayalam={isMalayalam} />
+            <Services isMalayalam={isMalayalam} />
             {/* <CtaArea /> */}
-            <Experience />
-            <Portfolio />
+            <Experience isMalayalam={isMalayalam} />
+            <Portfolio isMalayalam={isMalayalam} />
             {/* <Testimonial /> */}
             {/* <GetInTouch /> */}
             {/* <Blog /> */}
-            <FooterOne />
+            <FooterOne isMalayalam={isMalayalam} />
             <ScrollToTop />
         </div>
     );

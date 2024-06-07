@@ -8,7 +8,7 @@ import image5 from "../../public/assets/img/portfolio/port-2.jpg";
 const portfolioData = [
     {        
         id: '0',
-        title: 'Ingaugration',
+        title: 'Inaugration',
         subtitle: 'Kerala Khadi Board',
         image: image1,
         category: "photo-1",
