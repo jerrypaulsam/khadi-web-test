@@ -3,7 +3,7 @@ import Image from "next/image";
 import logo1 from "../../../../public/assets/img/logo-5.jpeg";
 import ResponsiveMenu from "../responsive-menu";
 
-const MobileMenuOne = ({ isOpen, setIsOpen }) => {
+const MobileMenuOne = ({isMalayalam, isOpen, setIsOpen }) => {
     return (
         <div className={`menu__bar-popup ${isOpen ? "show" : ""}`}>
             <div className="menu__bar-popup-top">
@@ -17,7 +17,7 @@ const MobileMenuOne = ({ isOpen, setIsOpen }) => {
             <div className="responsive-menu mean-container">
                 <div className="mean-bar">
                     <div className="mean-nav">
-                        <ResponsiveMenu />
+                        <ResponsiveMenu isMalayalam={isMalayalam} />
                     </div>
                 </div>
             </div>

@@ -110,8 +110,8 @@ const HeaderOne = ({variant}) => {
                     </div>
                 </div>
             </div>
-            <SideBar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
-            <MobileMenuOne isOpen={menuSidebar} setIsOpen={setMenuSidebar} />
+            <SideBar isMalayalam={isMalayalam} isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
+            <MobileMenuOne isMalayalam={isMalayalam} isOpen={menuSidebar} setIsOpen={setMenuSidebar} />
         </>
     );
 };
