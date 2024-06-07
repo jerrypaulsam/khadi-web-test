@@ -64,10 +64,10 @@ const HeaderOne = ({ isMalayalam, variant }) => {
                             <div className="header__area-menubar-left-logo">
                                 <Link href='/' style={{ display: 'flex', alignItems: 'center' }}>
                                     <img className='dark-n' src={logo2.src} alt='Kerala Khadi & Village Industries Board' />
-                                    <h1 className='dark-n' style={{fontSize: isMalayalam ? "9px" : "15px", marginLeft: "7px"}}>{isMalayalam ? "കേരള ഖാദി & വില്ലേജ് ഇൻഡസ്ട്രീസ് ബോർഡ്" : "Kerala Khadi & Village Industries Board"}</h1>
+                                    <h1 className='dark-n' style={{fontSize: isMalayalam ? "12px" : "15px", marginLeft: `${"7px"}`}}>{isMalayalam ? "കേരള ഖാദി & വില്ലേജ് ഇൻഡസ്ട്രീസ് ബോർഡ്" : "Kerala Khadi & Village Industries Board"}</h1>
                                     
                                     <img className="light-n" src={logo2.src} alt="Kerala Khadi & Village Industries Board" /> 
-                                    <h1 className='light-n' style={{fontSize: isMalayalam ? "9px" : "15px", marginLeft: "7px"}}>{isMalayalam ? "കേരള ഖാദി & വില്ലേജ് ഇൻഡസ്ട്രീസ് ബോർഡ്" : "Kerala Khadi & Village Industries Board"}</h1>
+                                    <h1 className='light-n' style={{fontSize: isMalayalam ? "12px" : "15px", marginLeft: `${"7px"}`}}>{isMalayalam ? "കേരള ഖാദി & വില്ലേജ് ഇൻഡസ്ട്രീസ് ബോർഡ്" : "Kerala Khadi & Village Industries Board"}</h1>
                                 </Link>
                             </div>
                         </div>

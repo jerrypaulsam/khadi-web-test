@@ -4503,8 +4503,13 @@ Responsive Menu Css
     z-index: 9;
   }
   .header__area-menubar-left-logo a img {
-    max-width: 55px;
+    max-width: 35px;
   }
+
+  .header__area-menubar-left-logo h1 {
+    font-size: 9px !important;
+  }
+
   .header__area-menubar-center {
     display: none;
   }

@@ -1,4 +1,5 @@
 'use client'
+
 import ToggleButton from 'react-toggle-button';
 import { useEffect, useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
@@ -13,38 +14,33 @@ export default function LanguageTab() {
     useEffect(() => {
         if (typeof window === 'undefined') return; // Ensure client-side rendering
 
-        const storedLanguage = localStorage.getItem('language');
+        let storedLanguage = localStorage.getItem('language');
+        if (!storedLanguage) {
+            storedLanguage = 'eng'; // Set default language to 'eng'
+            localStorage.setItem('language', storedLanguage);
+        }
+
         const pathSegments = pathname.split('/');
-        const currentLocale = pathSegments[1] || storedLanguage || 'eng';
+        const currentLocale = pathSegments[1] || storedLanguage;
 
         setLanguage(currentLocale);
         setIsMalayalam(currentLocale === 'mal');
-        localStorage.setItem('language', currentLocale);
     }, [pathname]);
 
     const handleLanguageChange = (lang) => {
-        // if (pathname === '/') {
-        //     // Base URL, no locale segment to add
-        //     localStorage.setItem('language', lang);
-        //     setLanguage(lang);
-        //     setIsMalayalam(lang === 'mal');
-        //     console.log("asd");
+        const pathSegments = pathname.split('/');
+        pathSegments[1] = lang === 'en' ? 'en' : 'mal'; // Update the locale segment
+        const newPath = pathSegments.join('/');
 
-        // } else {
-            const pathSegments = pathname.split('/');
-            pathSegments[1] = lang; // Update the locale segment
-            const newPath = pathSegments.join('/');
+        localStorage.setItem('language', lang === 'en' ? 'eng' : 'mal');
+        setLanguage(lang === 'en' ? 'eng' : 'mal');
+        setIsMalayalam(lang === 'mal');
 
-            localStorage.setItem('language', lang);
-            setLanguage(lang);
-            setIsMalayalam(lang === 'mal');
-
-            router.replace(newPath);
-        // }
+        router.replace(newPath);
     };
 
     const toggleLanguage = () => {
-        const newLanguage = isMalayalam ? 'eng' : 'mal';
+        const newLanguage = isMalayalam ? 'en' : 'mal';
         handleLanguageChange(newLanguage);
     };
 

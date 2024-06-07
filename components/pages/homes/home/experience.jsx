@@ -10,7 +10,7 @@ const Experience = ( {isMalayalam} ) => {
         title: isMalayalam ? 'നിങ്ങളുടെ സ്വപ്ന വസ്ത്രങ്ങൾ കണ്ടെത്തുക' : 'Find your dream Apparels.',
         des: isMalayalam ? 'കേരളത്തിൽ കൈകൊണ്ട് നെയ്ത മനോഹരമായ ഖാദി തുണിത്തരങ്ങൾ കണ്ടെത്തൂ! സർക്കാർ നടത്തുന്ന ഖാദി ഗ്രാമോദ്യോഗ് ഭവൻ ഷോറൂമുകളിലോ കേരള ഖാദി & വില്ലേജ് ഇൻഡസ്ട്രീസ് ബോർഡ് ലൊക്കേഷനുകളിലോ ആധികാരികമായ വസ്ത്രങ്ങൾ, ഗൃഹോപകരണങ്ങൾ എന്നിവയും മറ്റും കണ്ടെത്തുക. പ്രാദേശിക കരകൗശല തൊഴിലാളികളെ പിന്തുണയ്ക്കുകയും കേരള ഖാദിയുടെ സമ്പന്നമായ പൈതൃകം അനുഭവിക്കുകയും ചെയ്യുക.' : 'Discover beautiful, handwoven khadi textiles in Kerala! Find authentic clothing, homeware, and more at government-run Khadi Gramodyog Bhavan showrooms or Kerala Khadi & Village Industries Board locations. Support local artisans and experience the rich heritage of Kerala khadi.',
         btn_text: isMalayalam ? 'ഷോറൂമുകൾ കാണുക' : 'View Showrooms',
-        btn_link: `/${isMalayalam ? '#' : '#'}/marketing/khadi-grama-soubhagyas`,
+        btn_link: `/${isMalayalam ? 'mal' : 'en'}/marketing/khadi-grama-soubhagyas`,
         progress1: '80',
         progress2: '20',
     }

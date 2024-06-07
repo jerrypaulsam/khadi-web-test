@@ -1,3 +1,5 @@
+"use client"
+
 import shape1 from "../../../../public/assets/img/shape/about-1.png";
 import shape2 from "../../../../public/assets/img/shape/about-1-dark.png";
 import shape3 from "../../../../public/assets/img/shape/about-2.png";
@@ -8,18 +10,17 @@ import avatar from "../../../../public/assets/img/avatar/secretary.jpeg";
 import avatar2 from "../../../../public/assets/img/avatar/rajeeve.jpg";
 import avatar3 from "../../../../public/assets/img/avatar/jayarajan.jpg";
 
-
 import Count from "../../common/count";
 import Link from "next/link";
 
-const About = ( {isMalayalam} ) => {
+const About = ({ isMalayalam }) => {
     const aboutData = {
         count: 67,
-        exp: isMalayalam ? 'വർഷത്തെ ഖാദി പാരമ്പര്യം ': 'Years of Khadi Tradition',
+        exp: isMalayalam ? 'വർഷത്തെ ഖാദി പാരമ്പര്യം ' : 'Years of Khadi Tradition',
         subtitle: isMalayalam ? 'ഖാദി ബോർഡിനെക്കുറിച്ച്' : 'About Khadi Board',
         title: '',
         description: isMalayalam ? "കേരള ഗ്രാമവ്യവസായ ബോർഡ് എന്ന സ്റ്റാട്ട്യുട്ടറി സ്ഥാപനം 1957 ലെ ആക്ട് -9 പ്രകാരം രൂപീകരിച്ചിട്ടുള്ളതും സംസ്ഥാന ഖാദിയുടെയും ഗ്രാമവ്യവസായങ്ങളുടെയും ഏകോപനവും പ്രോത്സാഹനവും നടത്തുന്നതിൽ ചുമതലപ്പെട്ട സ്ഥാപനമാകുന്നു .കേരള ഗ്രാമവ്യവസായ ബോർഡ് ആയതിനുമേൽ ചുമതലപ്പെട്ട പദ്ധതികൾ ,സംഘങ്ങൾ ,രജിസ്റ്റർ ചെയ്ത മറ്റു സ്ഥാപനങ്ങൾ ,വ്യക്തികൾ തുടങ്ങിയവയിലൂടെയും വകുപ്പുതല യൂണിറ്റുകളുടെയും സംസ്ഥാന സർക്കാരിൻറെയും ഖാദി കമ്മീഷൻറെയും ദേശസാൽകൃത ബാങ്കുകളുടെയും സാമ്പത്തിക സഹായം നേടിക്കൊണ്ട് നടപ്പാക്കി വരുന്നു."
-         : 'Kerala Khadi and Village Industries Board is a statutory body constituted by the Act 9 of 1957, vested with the responsibility of organizing and promoting Khadi and Village Industries in the State. The Board implements the programmes through co-operative, registered institutions, individuals and departmental units by imparting/ availing assistance from Government of Kerala, Khadi Commission and Nationalized Banks.',
+            : 'Kerala Khadi and Village Industries Board is a statutory body constituted by the Act 9 of 1957, vested with the responsibility of organizing and promoting Khadi and Village Industries in the State. The Board implements the programmes through co-operative, registered institutions, individuals and departmental units by imparting/ availing assistance from Government of Kerala, Khadi Commission and Nationalized Banks.',
         author_name: isMalayalam ? 'ഡോ. കെ. എ. രതീഷ്' : 'Dr. K A Ratheesh',
         author_sub: isMalayalam ? 'സെക്രട്ടറി' : 'Secretary',
         minister_name: isMalayalam ? 'ശ്രീ. പി രാജീവ്' : 'Shri. P Rajeev',
@@ -52,7 +53,7 @@ const About = ( {isMalayalam} ) => {
                                 <h2>{aboutData?.title}</h2>
                                 <p>{aboutData?.description}</p>
                             </div>
-                            <div className="about__one-right-btn-author mt-10 mb-20" style={{display: "flex", justifyContent: "center"}}>
+                            <div className="about__one-right-btn-author mt-10 mb-20" style={{ display: "flex", justifyContent: "center" }}>
                                 <div className="about__one-right-btn-author-avatar">
                                     <img src={avatar2.src} alt={`Khadi Board - ${aboutData?.minister_name}`} />
                                 </div>
@@ -62,7 +63,7 @@ const About = ( {isMalayalam} ) => {
                                 </div>
                             </div>
 
-                            <div className="about__one-right-btn" style={{display: "flex", justifyContent: "center"}}>
+                            <div className="about__one-right-btn" style={{ display: "flex", justifyContent: "center" }}>
                                 <div className="about__one-right-btn-author">
                                     <div className="about__one-right-btn-author-avatar">
                                         <img src={avatar3.src} alt={`Khadi Board - ${aboutData?.vc_name}`} />
@@ -83,9 +84,9 @@ const About = ( {isMalayalam} ) => {
                                     </div>
                                 </div>
                             </div>
-                            <div style={{display: "flex", justifyContent: "center"}}>
+                            <div style={{ display: "flex", justifyContent: "center" }}>
                                 <Link className="btn-one mt-30"
-                                 href={aboutData?.btn_link}>{aboutData?.btn_title}<i className="far fa-chevron-double-right"></i></Link>
+                                    href={aboutData?.btn_link}>{aboutData?.btn_title}<i className="far fa-chevron-double-right"></i></Link>
                             </div>
                             {/* <div className="about__one-right-bottom">
                                 <div className="about__one-right-bottom-list">

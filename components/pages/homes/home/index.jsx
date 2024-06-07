@@ -14,6 +14,7 @@ import FooterOne from "@/components/layout/footers/footer-one";
 import BannerOne from "./banner";
 import ScrollToTop from "../../common/scroll/scroll-to-top";
 import { useEffect, useState } from 'react';
+import Marquee from "react-fast-marquee";
 
 
 
@@ -33,6 +34,25 @@ const HomeOne = () => {
     return (
         <div>
             <SEO pageTitle='Kerala Khadi & Village Industries Board' />
+            <Marquee
+                style={{ backgroundColor: "#000", }}
+                pauseOnHover={true}
+
+            >
+                <a href="#download-app" style={{ color: "#fff" }}>Download the Shopdibz App and get 50 Booster Coins free in your Shopdibz Wallet.</a>
+                &nbsp;&nbsp;<p style={{color: "white"}}>⦾</p>&nbsp;
+                <a href="#download-app" style={{ color: "#fff" }}>Download the ScrapItt App.</a>
+                &nbsp;&nbsp;<p style={{color: "white"}}>⦾</p>&nbsp;
+                <a href="#download-app" style={{ color: "#fff" }}>Download the Shopdibz App and get 50 Booster Coins free in your Shopdibz Wallet.</a>
+                &nbsp;&nbsp;<p style={{color: "white"}}>⦾</p>&nbsp;
+                <a href="#download-app" style={{ color: "#fff" }}>Download the ScrapItt App.</a>
+                &nbsp;&nbsp;<p style={{color: "white"}}>⦾</p>&nbsp;
+                <a href="#download-app" style={{ color: "#fff" }}>Download the Shopdibz App and get 50 Booster Coins free in your Shopdibz Wallet.</a>
+                &nbsp;&nbsp;<p style={{color: "white"}}>⦾</p>&nbsp;
+                <a href="#download-app" style={{ color: "#fff" }}>Download the ScrapItt App.</a>
+                &nbsp;&nbsp;<p style={{color: "white"}}>⦾</p>&nbsp;
+            </Marquee>
+
             <HeaderOne isMalayalam={isMalayalam} />
             <BannerOne isMalayalam={isMalayalam} />
             <About isMalayalam={isMalayalam} />
