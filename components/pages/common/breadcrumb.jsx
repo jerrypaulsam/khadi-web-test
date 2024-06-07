@@ -14,7 +14,7 @@ const BreadCrumb = ({title, innerTitle}) => {
                                 <li><Link href="/">Home</Link><span>|</span></li>
                                 <li>{innerTitle}</li>
                             </ul>
-                            <h1>{title}</h1>
+                            <h2>{title}</h2>
                         </div>
                     </div>
                 </div>

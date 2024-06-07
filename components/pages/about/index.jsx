@@ -9,17 +9,17 @@ import ScrollToTop from "../common/scroll/scroll-to-top";
 import WhoWeAre from "./who-we-are";
 import History from "./history";
 
-const AboutUs = () => {
+const AboutUs = ({ isMalayalam }) => {
     return (
       <>
-        <SEO pageTitle="Kerala Khadi - About Us" />
-        <HeaderOne />
-        <BreadCrumb title="About Us" innerTitle="About Kerala Khadi Board" />
-        <AboutMain />
-            <WhoWeAre />
+        <SEO pageTitle={isMalayalam ? "കേരള ഖാദി - ഞങ്ങളെ കുറിച്ച്" : "Kerala Khadi - About Us"} />
+        <HeaderOne isMalayalam={isMalayalam} />
+        <BreadCrumb title={isMalayalam ? "ഞങ്ങളെ കുറിച്ച്" : "About Us"} innerTitle={isMalayalam ? "കേരള ഖാദി ബോർഡിനെക്കുറിച്ച്" : "About Kerala Khadi Board"} />
+        <AboutMain isMalayalam={isMalayalam} />
+            <WhoWeAre isMalayalam={isMalayalam} />
             {/* <History /> */}
         <div className='all-footer'>
-            <FooterOne />
+            <FooterOne isMalayalam={isMalayalam} />
         </div>
             <ScrollToTop />
       </>

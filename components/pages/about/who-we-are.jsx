@@ -5,7 +5,7 @@ import shape from "../../../public/assets/img/shape/about-solution.png";
 import Count from '../common/count';
 import Link from 'next/link';
 
-const WhoWeAre = () => {
+const WhoWeAre = ({ isMalayalam }) => {
     return (
         <>
             <div className="company__two section-padding pt-0">
@@ -14,18 +14,18 @@ const WhoWeAre = () => {
                         <div className="col-xl-6 col-lg-7 lg-mb-30">
                             <div className="company__two-left">
                                 <div className="company__two-left-title">
-                                    <span className="subtitle-one">Our Showrooms</span>
-                                    <h2>Find your dream Apparels.</h2>
-                                    <p>Discover beautiful, handwoven khadi textiles in Kerala! Find authentic clothing, homeware, and more at government-run Khadi Gramodyog Bhavan showrooms or Kerala Khadi & Village Industries Board locations. Support local artisans and experience the rich heritage of Kerala khadi.</p>
+                                    <span className="subtitle-one">{isMalayalam ? 'ഞങ്ങളുടെ ഷോറൂമുകൾ' : 'Our Showrooms'}</span>
+                                    <h3>{isMalayalam ? 'നിങ്ങളുടെ സ്വപ്ന വസ്ത്രങ്ങൾ കണ്ടെത്തുക' : 'Find your dream Apparels.'}</h3>
+                                    <p>{isMalayalam ? 'കേരളത്തിൽ കൈകൊണ്ട് നെയ്ത മനോഹരമായ ഖാദി തുണിത്തരങ്ങൾ കണ്ടെത്തൂ! സർക്കാർ നടത്തുന്ന ഖാദി ഗ്രാമോദ്യോഗ് ഭവൻ ഷോറൂമുകളിലോ കേരള ഖാദി & വില്ലേജ് ഇൻഡസ്ട്രീസ് ബോർഡ് ലൊക്കേഷനുകളിലോ ആധികാരികമായ വസ്ത്രങ്ങൾ, ഗൃഹോപകരണങ്ങൾ എന്നിവയും മറ്റും കണ്ടെത്തുക. പ്രാദേശിക കരകൗശല തൊഴിലാളികളെ പിന്തുണയ്ക്കുകയും കേരള ഖാദിയുടെ സമ്പന്നമായ പൈതൃകം അനുഭവിക്കുകയും ചെയ്യുക.' : 'Discover beautiful, handwoven khadi textiles in Kerala! Find authentic clothing, homeware, and more at government-run Khadi Gramodyog Bhavan showrooms or Kerala Khadi & Village Industries Board locations. Support local artisans and experience the rich heritage of Kerala khadi.'}</p>
                                 </div>
                                 <div className="company__two-left-skill">
                                     <div className="company__two-left-skill-item">
-                                        <h2><Count number={8058} /></h2>
-                                        <h6>Showrooms in India</h6>
+                                        <h2><Count number={185} /></h2>
+                                        <h6>{isMalayalam ? "കേരളത്തിലെ ഷോറൂമുകൾ" : "Showrooms in Kerala"}</h6>
                                     </div>
                                     <div className="company__two-left-skill-item">
-                                        <h2><Count number={92} /></h2>
-                                        <h6>Showrooms in Kerala</h6>
+                                        <h2><Count number={9} /></h2>
+                                        <h6>{isMalayalam ? "തിരുവനന്തപുരത്തെ ഷോറൂമുകൾ" : "Showrooms in Trivandrum"}</h6>
                                     </div>
                                 </div>
                                 {/* <Link className="btn-two" href="/about">Discover more<i className="far fa-chevron-double-right"></i></Link> */}
