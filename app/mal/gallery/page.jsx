@@ -4,7 +4,7 @@ import HeaderOne from "@/components/layout/headers/header-one";
 import BreadCrumb from "@/components/pages/common/breadcrumb";
 import ScrollToTop from "@/components/pages/common/scroll/scroll-to-top";
 import FooterOne from "@/components/layout/footers/footer-one";
-import ServicesMain from "@/components/pages/services/service/services";
+import PhotoAlbums from "@/components/pages/gallery/services";
 
 const PhotoGallery = () => {
     return (
@@ -12,7 +12,7 @@ const PhotoGallery = () => {
             <SEO pageTitle="Kerala Khadi - Photo Gallery" />
             <HeaderOne />
             <BreadCrumb title="Photo Gallery" innerTitle="Kerala Khadi & Village Industries Board" />
-            <ServicesMain />
+            <PhotoAlbums />
             <div className='all-footer'>
                 <FooterOne />
             </div>

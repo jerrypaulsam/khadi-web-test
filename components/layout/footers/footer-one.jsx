@@ -1,4 +1,3 @@
-import servicesData from "@/components/data/services-data";
 import Social from "@/components/data/social";
 import Link from "next/link";
 import logo from "../../../public/assets/img/logo-5.jpeg";
@@ -6,7 +5,7 @@ import govLogo from "../../../public/assets/img/kerala-gov.png";
 import industriesLogo from "../../../public/assets/img/dept-of-indcomm.png";
 
 const FooterOne = () => {
-    const servicesD = servicesData.slice(0, 4);
+
     return (
         <>
             <div className="footer__one">
