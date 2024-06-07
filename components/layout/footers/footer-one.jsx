@@ -1,3 +1,5 @@
+'use client'
+
 import Social from "@/components/data/social";
 import Link from "next/link";
 import logo from "../../../public/assets/img/logo-5.jpeg";
