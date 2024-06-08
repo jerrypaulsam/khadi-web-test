@@ -58,9 +58,10 @@ const HomeOne = () => {
             <BannerOne isMalayalam={isMalayalam} />
             <NewsTicker isMalayalam={isMalayalam} />
             <About isMalayalam={isMalayalam} />
+            <Experience isMalayalam={isMalayalam} />
+
             <Services isMalayalam={isMalayalam} />
             {/* <CtaArea /> */}
-            <Experience isMalayalam={isMalayalam} />
             <Portfolio isMalayalam={isMalayalam} />
             {/* <Testimonial /> */}
             {/* <GetInTouch /> */}

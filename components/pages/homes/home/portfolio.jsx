@@ -32,7 +32,7 @@ const slideControl = {
 const Portfolio = ({ isMalayalam }) => {
 
     return (
-        <div className="portfolio__area dark__image section-padding pb-0 overflow-hidden">
+        <div className="experience__area dark__image section-padding pb-0 overflow-hidden">
             <div className="container-fluid p-0">
                 <div className="row mb-60">
                     <div className="col-xl-12">
