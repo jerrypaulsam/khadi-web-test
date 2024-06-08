@@ -3,7 +3,7 @@ import Link from 'next/link';
 import servicesData from '@/components/data/services-data';
 
 const Services = ({ isMalayalam }) => {
-    const servicesItem = servicesData.slice(0, 2);
+    const servicesItem = servicesData.slice(0, 4);
     const servicesContent = {
         subtitle: isMalayalam ? 'ഞങ്ങളുടെ പ്രോഗ്രാമുകൾ' : 'Our Programs',
         title: isMalayalam ? 'സ്കീമുകളും പ്രോഗ്രാമുകളും' : 'Schemes & Programs',
@@ -11,7 +11,7 @@ const Services = ({ isMalayalam }) => {
         btn_link: isMalayalam ? '#' : '#'
     }
     return ( 
-        <div className="services__one section-padding pt-0">
+        <div className="services__one section-padding pt-40">
             <div className="container">
                 <div className="row align-items-end mb-45">
                     <div className="col-xl-7 col-lg-8 lg-mb-30">

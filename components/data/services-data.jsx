@@ -22,6 +22,22 @@ const servicesData = [
         number: '3',
         image: image2,
     },
+    {
+        id: 'scheme-4',
+        icon: <i className="flaticon-corporate"></i>,
+        title: 'Ente Gramam Scheme',
+        description: 'Apply Now',
+        number: '4',
+        image: image1,
+    },
+    {
+        id: 'scheme-5',
+        icon: <i className="flaticon-consultant-services"></i>,
+        title: 'Become a Khadi Seller',
+        description: 'Apply Now',
+        number: '5',
+        image: image2,
+    }
     // {
     //     id: 'machine-learning', 
     //     icon: <i className="flaticon-data-science"></i>,
