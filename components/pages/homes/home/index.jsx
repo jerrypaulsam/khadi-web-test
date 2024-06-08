@@ -15,6 +15,7 @@ import BannerOne from "./banner";
 import ScrollToTop from "../../common/scroll/scroll-to-top";
 import { useEffect, useState } from 'react';
 import Marquee from "react-fast-marquee";
+import NewsTicker from "./NewsTicker";
 
 
 
@@ -34,7 +35,7 @@ const HomeOne = () => {
     return (
         <div>
             <SEO pageTitle='Kerala Khadi & Village Industries Board' />
-            <Marquee
+            {/* <Marquee
                 style={{ backgroundColor: "#000", }}
                 pauseOnHover={true}
 
@@ -51,10 +52,11 @@ const HomeOne = () => {
                 &nbsp;&nbsp;<p style={{color: "white"}}>⦾</p>&nbsp;
                 <a href="#download-app" style={{ color: "#fff" }}>Download the ScrapItt App.</a>
                 &nbsp;&nbsp;<p style={{color: "white"}}>⦾</p>&nbsp;
-            </Marquee>
+            </Marquee> */}
 
             <HeaderOne isMalayalam={isMalayalam} />
             <BannerOne isMalayalam={isMalayalam} />
+            <NewsTicker isMalayalam={isMalayalam} />
             <About isMalayalam={isMalayalam} />
             <Services isMalayalam={isMalayalam} />
             {/* <CtaArea /> */}
