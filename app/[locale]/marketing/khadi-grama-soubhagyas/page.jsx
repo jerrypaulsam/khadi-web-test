@@ -1,3 +1,6 @@
+"use client"
+
+import { useEffect, useState } from 'react';
 import Link from "next/link";
 import SEO from "@/components/data/seo";
 import HeaderOne from "@/components/layout/headers/header-one";
@@ -9,11 +12,23 @@ import image1 from "@/public/assets/img/about/grama_soubhagya.jpg";
 
 const GramaSoubhagya = () => {
 
+    const [isMalayalam, setIsMalayalam] = useState(false);
+
+    useEffect(() => {
+        let language = localStorage.getItem("language");
+        if ((language === null && language === undefined) || language === "eng") {
+            setIsMalayalam(false)
+        } else {
+            setIsMalayalam(true)
+        }
+
+    }, [isMalayalam]);
+
     return (
         <>
-            <SEO pageTitle="Kerala Khadi - Khadi Grama Soubhagyas" />
+            <SEO pageTitle={isMalayalam ? "കേരള ഖാദി - ഖാദി ഗ്രാമ സൗഭാഗ്യകൾ" : "Kerala Khadi - Khadi Grama Soubhagyas"} />
             <HeaderOne />
-            <BreadCrumb title="Khadi Grama Soubhagyas" innerTitle="Kerala Khadi & Village Industries Board" />
+            <BreadCrumb title={isMalayalam ? "ഖാദി ഗ്രാമ സൗഭാഗ്യകൾ" : "Khadi Grama Soubhagyas"} innerTitle={isMalayalam ? "കേരള ഖാദി & വില്ലേജ് ഇൻഡസ്ട്രീസ് ബോർഡ്" : "Kerala Khadi & Village Industries Board"} />
 
             <div className="team__single section-padding">
                 <div className="container">
@@ -30,26 +45,26 @@ const GramaSoubhagya = () => {
                         <div className="col-xl-7 col-lg-7">
                             <div className="team__single-right">
                                 <div className="team__single-right-experience">
-                                    <h3>Khadi Grama Soubhagyas</h3>
+                                    <h3>{isMalayalam ? "ഖാദി ഗ്രാമ സൗഭാഗ്യകൾ" : "Khadi Grama Soubhagyas"}</h3>
                                     <br />
                                     <h4>
-                                        DETAILS OF THE SALES OUTLETS UNDER THE BOARD
+                                        {isMalayalam ? "ബോർഡിന് കീഴിലുള്ള വിൽപ്പന ഔട്ട്‌ലെറ്റുകളുടെ വിശദാംശങ്ങൾ" : "DETAILS OF THE SALES OUTLETS UNDER THE BOARD"}
                                     </h4>
                                     <br />
 
                                     <table className="officals-table">
                                         <thead>
                                             <tr>
-                                                <th>Name of Khadi Grama Soubhagya</th>
-                                                <th>Phone Number</th>
-                                                <th>District</th>
+                                                <th>{isMalayalam ? "ഖാദി ഗ്രാമ സൗഭാഗ്യയുടെ പേര്" : "Name of Khadi Grama Soubhagya"}</th>
+                                                <th>{isMalayalam ? "ഫോൺ നമ്പർ" : "Phone Number"}</th>
+                                                <th>{isMalayalam ? "ജില്ല" : "District"}</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td>Khadi grama soubhagya attukal shopping complex, eastfort, thiruvananthapuram-695 023</td>
                                                 <td>9746261938</td>
-                                                <td>Thiruvananthapuram</td>
+                                                <td>Thiruvananthapuram</td> 
                                             </tr>
                                             <tr>
                                                 <td>Khadi grama soubhagya sree mookambika shopping complex balaramapuram, 695 501</td>

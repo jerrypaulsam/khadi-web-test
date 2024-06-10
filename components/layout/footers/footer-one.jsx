@@ -5,9 +5,10 @@ import Link from "next/link";
 import logo from "../../../public/assets/img/logo-5.jpeg";
 import govLogo from "../../../public/assets/img/kerala-gov.png";
 import industriesLogo from "../../../public/assets/img/dept-of-indcomm.png";
+import CountUp from 'react-countup';
 
 const FooterOne = ({ isMalayalam }) => {
- 
+
     return (
         <>
             <div className="footer__one">
@@ -30,11 +31,11 @@ const FooterOne = ({ isMalayalam }) => {
                                 <h4>{isMalayalam ? "കൂടുതൽ വിവരങ്ങൾ" : "More Info"}</h4>
                                 <div className="footer__one-widget-solution">
                                     <ul>
-                                        <li><Link href={`/${isMalayalam ? "mal" : "en"}/tender-notice`}><i className="far fa-chevron-double-right"></i>{isMalayalam ? "ദർഘാസുകൾ" : "Tender Notice"}</Link></li>     
+                                        <li><Link href={`/${isMalayalam ? "mal" : "en"}/tender-notice`}><i className="far fa-chevron-double-right"></i>{isMalayalam ? "ദർഘാസുകൾ" : "Tender Notice"}</Link></li>
                                         <li><Link href={`#`}><i className="far fa-chevron-double-right"></i>{isMalayalam ? "ഡൗൺലോഡുകൾ" : "Downloads"}</Link></li>
-                                        <li><Link href={`#`}><i className="far fa-chevron-double-right"></i>{isMalayalam ? "നിയമവും ചട്ടങ്ങളും" : "Acts & Rules"}</Link></li>   
-                                        <li><Link href={`/${isMalayalam ? "mal" : "en"}/gallery`}><i className="far fa-chevron-double-right"></i>{isMalayalam ? "ഫോട്ടോ  ഗാലറി" : "Photo Gallery"}</Link></li>          
-                                        <li><Link href={`/${isMalayalam ? "mal" : "en"}/contact`}><i className="far fa-chevron-double-right"></i>{isMalayalam ? "ബന്ധപ്പെടുക" : "Contact Us"}</Link></li>                    
+                                        <li><Link href={`#`}><i className="far fa-chevron-double-right"></i>{isMalayalam ? "നിയമവും ചട്ടങ്ങളും" : "Acts & Rules"}</Link></li>
+                                        <li><Link href={`/${isMalayalam ? "mal" : "en"}/gallery`}><i className="far fa-chevron-double-right"></i>{isMalayalam ? "ഫോട്ടോ  ഗാലറി" : "Photo Gallery"}</Link></li>
+                                        <li><Link href={`/${isMalayalam ? "mal" : "en"}/contact`}><i className="far fa-chevron-double-right"></i>{isMalayalam ? "ബന്ധപ്പെടുക" : "Contact Us"}</Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -49,7 +50,7 @@ const FooterOne = ({ isMalayalam }) => {
                                         </div>
                                         <div className="footer__one-widget-location-item-info">
                                             <Link href="https://maps.app.goo.gl/qdDud15AoVnWiDAy9" target='_blank'>{isMalayalam ? "വഞ്ചിയൂർ, തിരുവനന്തപുരം - 695035" : "Vanchiyoor, Trivandrum - 695035"}</Link>
-                                            <Link href="tel:04712471696" >{isMalayalam ? "ഫോൺ": "Phone"} : 0471-2471696</Link>, <Link href="tel:04712471695">0471-2471695</Link>
+                                            <Link href="tel:04712471696" >{isMalayalam ? "ഫോൺ" : "Phone"} : 0471-2471696</Link>, <Link href="tel:04712471695">0471-2471695</Link>
                                         </div>
                                     </div>
                                     {/* <h6>Branch Office</h6> */}
@@ -71,6 +72,24 @@ const FooterOne = ({ isMalayalam }) => {
                                         <button type="submit"><i className="fas fa-paper-plane"></i></button>
                                     </form>
                                 </div>
+
+                                <div style={{
+                                    backgroundColor: "rgba(255, 255, 255, 0.2)",
+                                    borderRadius: "8px",
+                                    padding: "2px",
+                                    maxWidth: "200px",
+                                    margin: "20px auto",
+                                    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)"
+                                }}>
+                                    <h5 style={{ color: "white", fontSize: "15px", textAlign: "center" }}>{isMalayalam ? "സന്ദർശകരുടെ എണ്ണം" : "Visitors Count"}</h5>
+                                    <p style={{ color: "white", fontSize: "14px", textAlign: "center" }}>
+                                        <CountUp
+                                            end={10000}
+                                            enableScrollSpy
+                                        />
+                                    </p>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -79,13 +98,13 @@ const FooterOne = ({ isMalayalam }) => {
                     <div className="container">
                         <div className="row">
                             <div className="col-xl-12">
-                                <p>Copyright 2024  <Link href="/">Kerala Khadi & Village Industries Board</Link> 
-                                - Developed & Maintained By <a href="https://www.shopdibz.com/about-shopdibz" target="_blank">Shopdibz Private Limited</a></p>
+                                <p>Copyright 2024  <Link href="/">Kerala Khadi & Village Industries Board</Link>
+                                    - Developed & Maintained By <a href="https://www.shopdibz.com/about-shopdibz" target="_blank">Shopdibz Private Limited</a></p>
                             </div>
                         </div>
                     </div>
-                </div>            
-            </div>            
+                </div>
+            </div>
         </>
     );
 };
