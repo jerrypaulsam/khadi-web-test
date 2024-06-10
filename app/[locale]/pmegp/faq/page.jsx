@@ -1,3 +1,7 @@
+"use client"
+
+import { useEffect, useState } from 'react';
+
 import Link from "next/link";
 import SEO from "@/components/data/seo";
 import HeaderOne from "@/components/layout/headers/header-one";
@@ -8,6 +12,17 @@ import ScrollToTop from "@/components/pages/common/scroll/scroll-to-top";
 import image1 from "@/public/assets/img/pages/PMEGP.jpg";
 
 const PMEGPFAQ = () => {
+    const [isMalayalam, setIsMalayalam] = useState(false);
+
+    useEffect(() => {
+        let language = localStorage.getItem("language");
+        if ((language === null && language === undefined) || language === "eng") {
+            setIsMalayalam(false)
+        } else {
+            setIsMalayalam(true)
+        }
+
+    }, [isMalayalam]);
 
     return (
         <>
