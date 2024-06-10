@@ -26,7 +26,7 @@ const PMEGPPerformance = () => {
     return (
         <>
             <SEO pageTitle="Kerala Khadi - PMEGP Performance" />
-            <HeaderOne />
+            <HeaderOn isMalayalam={isMalayalam} />
             <BreadCrumb title="PMEGP Performance" innerTitle="Kerala Khadi - PMEGP Performance" />
 
             <div className="team__single section-padding">
@@ -191,7 +191,7 @@ const PMEGPPerformance = () => {
             </div>
 
             <div className='all-footer'>
-                <FooterOne />
+                <FooterOne isMalayalam={isMalayalam} />
             </div>
             <ScrollToTop />
         </>
