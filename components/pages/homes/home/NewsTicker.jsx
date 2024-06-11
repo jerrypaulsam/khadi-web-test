@@ -11,9 +11,9 @@ const NewsTicker = ({ isMalayalam }) => {
                     <img src="\assets\img\pages\updates.jpg" alt="News Image" />
                 </div>
                 <div className="news-ticker ">
-                    <div className="news-wrapper">
-                        <div className="news-item"><Link href={`#`}>{isMalayalam ? "ബ്രേക്കിംഗ് ന്യൂസ് 1" : "Breaking news 1"}</Link></div>
-                        <div className="news-item"><Link href={`#`}>{isMalayalam ? "ബ്രേക്കിംഗ് ന്യൂസ് 2" : "Breaking news 2"}</Link> </div>
+                    <div className="news-wrapper ">
+                        <div className="news-item"><Link href={`#`}>{isMalayalam ? "പൊതുമരാമത്ത് വകുപ്പിൻ്റെ അല്ലെങ്കിൽ മറ്റ് സർക്കാരിൻ്റെ രജിസ്റ്റർ ചെയ്ത കരാറുകാരിൽ നിന്ന് സീൽ ചെയ്ത ക്വട്ടേഷനുകൾ ക്ഷണിക്കുന്നു. മലപ്പുറം ഖാദി ഉൽപ്പാദന യൂണിറ്റിൻ്റെ പരിപാലനത്തിനുള്ള വകുപ്പ്" : "Sealed quotations are invited from registered contractors of public work department or other Govt. department for the maintainance work of Khadi production unit Malapuram"}</Link></div>
+                        <div className="news-item"><Link href={`#`}>{isMalayalam ? "എൻ്റെ ഗ്രാമം പദ്ധതിയുടെ പുതുക്കിയ മാര്‍ഗരേഖ" : "Updated Guidelines for Ente Gramam Scheme"}</Link> </div>
                         <div className="news-item"><Link href={`#`}>{isMalayalam ? "ബ്രേക്കിംഗ് ന്യൂസ് 3" : "Breaking news 3"}</Link> </div>
                         <div className="news-item"><Link href={`#`}>{isMalayalam ? "ബ്രേക്കിംഗ് ന്യൂസ് 4" : "Breaking news 4"} </Link></div>
                         <div className="news-item"><Link href={`#`}>{isMalayalam ? "ബ്രേക്കിംഗ് ന്യൂസ് 5" : "Breaking news 5"}</Link> </div>
