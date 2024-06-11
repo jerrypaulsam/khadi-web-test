@@ -4316,10 +4316,12 @@ Responsive Menu Css
 .news-ticker-container {
   display: flex;
   flex-wrap: wrap;
-  max-width: 900px;
+  /* max-width: 950px; */
   /* height: 200px; */
+  background-color: #ccc;
   margin: 10px auto;
   border: 1px solid #ccc;
+  border-radius: 8px;
 }
 
 .news-image {
@@ -4343,7 +4345,6 @@ Responsive Menu Css
   position: relative;
   display: flex;
   align-items: center;
-  height: 200px; /* Added a fixed height for the news ticker */
   /* background-color: #f9f9f9; */
 }
 
@@ -4353,7 +4354,7 @@ Responsive Menu Css
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 200px; /* Set a fixed height */
+  height: 250px; /* Set a fixed height */
   /* background-color: #f9f9f9; */
 }
 
@@ -4368,7 +4369,7 @@ Responsive Menu Css
 
 .news-item {
   padding: 20px;
-  border-bottom: 1px solid #ccc;
+  /* border-bottom: 1px solid #ccc; */
   width: 100%;
   text-align: center;
 }

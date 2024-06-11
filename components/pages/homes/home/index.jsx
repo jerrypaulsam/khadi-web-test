@@ -35,24 +35,16 @@ const HomeOne = () => {
     return (
         <div>
             <SEO pageTitle='Kerala Khadi & Village Industries Board' />
-            {/* <Marquee
+            <Marquee
                 style={{ backgroundColor: "#000", }}
                 pauseOnHover={true}
 
             >
-                <a href="#download-app" style={{ color: "#fff" }}>Download the Shopdibz App and get 50 Booster Coins free in your Shopdibz Wallet.</a>
                 &nbsp;&nbsp;<p style={{color: "white"}}>⦾</p>&nbsp;
-                <a href="#download-app" style={{ color: "#fff" }}>Download the ScrapItt App.</a>
-                &nbsp;&nbsp;<p style={{color: "white"}}>⦾</p>&nbsp;
-                <a href="#download-app" style={{ color: "#fff" }}>Download the Shopdibz App and get 50 Booster Coins free in your Shopdibz Wallet.</a>
-                &nbsp;&nbsp;<p style={{color: "white"}}>⦾</p>&nbsp;
-                <a href="#download-app" style={{ color: "#fff" }}>Download the ScrapItt App.</a>
-                &nbsp;&nbsp;<p style={{color: "white"}}>⦾</p>&nbsp;
-                <a href="#download-app" style={{ color: "#fff" }}>Download the Shopdibz App and get 50 Booster Coins free in your Shopdibz Wallet.</a>
-                &nbsp;&nbsp;<p style={{color: "white"}}>⦾</p>&nbsp;
-                <a href="#download-app" style={{ color: "#fff" }}>Download the ScrapItt App.</a>
-                &nbsp;&nbsp;<p style={{color: "white"}}>⦾</p>&nbsp;
-            </Marquee> */}
+                <a href="#download-app" style={{ color: "#fff" }}>{isMalayalam ? "ജൂൺ 15 വരെ ഖാദി വസ്ത്രങ്ങൾക്ക് 30% കിഴിവ്. ഖാദി ഷോറൂമുകൾ സന്ദർശിക്കൂ!" : "30% Rebate on Khadi Clothes until 15th June. Visit Khadi Showrooms!"}</a>
+
+
+            </Marquee>
 
             <HeaderOne isMalayalam={isMalayalam} />
             <BannerOne isMalayalam={isMalayalam} />
