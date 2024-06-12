@@ -25,9 +25,9 @@ const PMEGPPerformance = () => {
 
     return (
         <>
-            <SEO pageTitle="Kerala Khadi - PMEGP Performance" />
-            <HeaderOn isMalayalam={isMalayalam} />
-            <BreadCrumb title="PMEGP Performance" innerTitle="Kerala Khadi - PMEGP Performance" />
+            <SEO pageTitle={isMalayalam ? "കേരള ഖാദി - PMEGP പ്രകടനം" : "Kerala Khadi - PMEGP Performance"} />
+            <HeaderOne isMalayalam={isMalayalam} />
+            <BreadCrumb title={isMalayalam ? "PMEGP പ്രകടനം" : "PMEGP Performance"} innerTitle={isMalayalam ? "കേരള ഖാദി - PMEGP പ്രകടനം" : "Kerala Khadi - PMEGP Performance"} />
 
             <div className="team__single section-padding">
                 <div className="container">
@@ -44,21 +44,23 @@ const PMEGPPerformance = () => {
                         <div className="col-xl-7 col-lg-7">
                             <div className="team__single-right">
                                 <div className="team__single-right-experience">
-                                    <h3>PMEGP Performance</h3>
+                                    <h3>{isMalayalam ? "PMEGP പ്രകടനം" : "PMEGP Performance"}</h3>
                                     <br />
                                     <p>
-                                        Prime ministers employment programm yearwise performance of the implimentation through board
+                                        {isMalayalam
+                                            ? "പ്രധാനമന്ത്രിമാരുടെ തൊഴിൽ പദ്ധതി ബോർഡ് മുഖേന നടപ്പിലാക്കുന്ന വർഷാവർഷം പ്രകടനം"
+                                            : "Prime ministers employment programm yearwise performance of the implimentation through board"}
 
                                     </p>
                                     <br />
 
                                     <table className="officals-table">
                                         <tr>
-                                            <th>YEAR</th>
-                                            <th>NO. OF UNITS SANCTIONED</th>
-                                            <th>PROJECT COST<br />(Rs. In Lakh)</th>
-                                            <th>MARGIN MONEY GRANT SANCTIONED</th>
-                                            <th>EMPLOYMENT GENERATED<br />Nos.</th>
+                                            <th>{isMalayalam ? "വർഷം" : "YEAR"}</th>
+                                            <th>{isMalayalam ? "ഉദ്യമങ്ങൾ അനുവദിച്ചത്" : "NO. OF UNITS SANCTIONED"}</th>
+                                            <th>{isMalayalam ? "പദ്ധതിയുടെ ചെലവ് (ലക്ഷത്തിൽ)" : "PROJECT COST (Rs. In Lakh)"}</th>
+                                            <th>{isMalayalam ? "മാർജിൻ ഗ്രാൻറ് അനുവദിച്ചത്" : "MARGIN MONEY GRANT SANCTIONED"}</th>
+                                            <th>{isMalayalam ? "തൊഴിൽ സൃഷ്ടിച്ചത് (സംഖ്യ)" : "EMPLOYMENT GENERATED (Nos.)"}</th>
                                         </tr>
                                         <tr>
                                             <td>2008-2009</td>
