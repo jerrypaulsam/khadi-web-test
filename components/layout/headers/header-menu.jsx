@@ -12,9 +12,9 @@ const MainMenu = ({isMalayalam}) => {
                         <li><Link href={`/${isMalayalam ? "mal" : "en"}/about-us/objectives`}>{isMalayalam ? "ഉദ്ദേശലക്ഷ്യങ്ങൾ" : "Objectives"}</Link></li>
                         <li><Link href={`/${isMalayalam ? "mal" : "en"}/about-us/schemes`}>{isMalayalam ? "പദ്ധതികൾ" : "Our Schemes"}</Link></li>
                         <li><Link href={`#`}>{isMalayalam ? "പൗരാവകാശ രേഖ" : "Citizen's Charter"}</Link></li>
-                        <li><Link href={`${isMalayalam ? "mal" : "en"}/acts-rules`}>{isMalayalam ? "നിയമവും ചട്ടവും" : "Acts & Rules"}</Link></li>
+                        <li><Link href={`/${isMalayalam ? "mal" : "en"}/acts-rules`}>{isMalayalam ? "നിയമവും ചട്ടവും" : "Acts & Rules"}</Link></li>
                         <li><Link href={`/${isMalayalam ? "mal" : "en"}/about-us/organizational-structure`}>{isMalayalam ? "ഘടന" : "Organization Structure"}</Link></li>
-                        <li><Link href={`#`}>{isMalayalam ? "ബോർഡ് അംഗങ്ങൾ " : "Board Members"}</Link></li>
+                        <li><Link href={`/${isMalayalam ? "mal" : "en"}/about-us/board-members`}>{isMalayalam ? "ബോർഡ് അംഗങ്ങൾ " : "Board Members"}</Link></li>
                         <li><Link href={`/${isMalayalam ? "mal" : "en"}/important-officials`}>{isMalayalam ? "പ്രധാന അധികാരികൾ" : "Important Officials"}</Link></li> 
                         <li><Link href={`/${isMalayalam ? "mal" : "en"}/project-officers`}>{isMalayalam ? "ജില്ലാ അധികാരികൾ" : "Project Officers"}</Link></li>
                         <li className='menu-item-has-children'><Link href={`#`}>{isMalayalam ? "വിപണനം" : "Marketing"}</Link>
@@ -36,7 +36,7 @@ const MainMenu = ({isMalayalam}) => {
                     <ul className='sub-menu'>
                         <li><Link href={`/${isMalayalam ? "mal" : "en"}/khadi/khadi-program`}>{isMalayalam ? "ഖാദി പരിപാടികൾ" : "Khadi Program"}</Link></li>
                         <li><Link href={`/${isMalayalam ? "mal" : "en"}/khadi/welfare-measures`}>{isMalayalam ? "ക്ഷേമ നടപടികൾ" : "Welfare Measures"}</Link></li>
-                        <li><Link href={`#`}>{isMalayalam ? "ഡിപ്പാർട്ട്മെൻറ്റൽ യൂണിറ്റുകൾ" : "Departmental Units"}</Link></li>
+                        <li><Link href={`/${isMalayalam ? "mal" : "en"}/khadi/departmental-units`}>{isMalayalam ? "ഡിപ്പാർട്ട്മെൻറ്റൽ യൂണിറ്റുകൾ" : "Departmental Units"}</Link></li>
                         <li><Link href={`/${isMalayalam ? "mal" : "en"}/khadi/details-of-the-khadi-institutions`}>{isMalayalam ? "ഖാദി സ്ഥാപനങ്ങൾ" : "Khadi Institutions"}</Link></li>
                         <li><Link href={`#`}>{isMalayalam ? "പ്രകടനമികവ് " : "Performance"}</Link></li>
                         <li><Link href={`#`}>{isMalayalam ? "തൊഴിലാളി ക്ഷേമനിധി ബോർഡ്" : "Workers Welfare Fund Board"}</Link></li>

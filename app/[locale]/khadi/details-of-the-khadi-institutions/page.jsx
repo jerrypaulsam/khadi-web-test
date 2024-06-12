@@ -1,3 +1,7 @@
+"use client"
+
+import { useEffect, useState } from 'react';
+
 import Link from "next/link";
 import SEO from "@/components/data/seo";
 import HeaderOne from "@/components/layout/headers/header-one";
@@ -8,12 +12,23 @@ import ScrollToTop from "@/components/pages/common/scroll/scroll-to-top";
 import image1 from "@/public/assets/img/about/objectives.jpg";
 
 const KhadiInstitutions = () => {
+    const [isMalayalam, setIsMalayalam] = useState(false);
+
+    useEffect(() => {
+        let language = localStorage.getItem("language");
+        if ((language === null && language === undefined) || language === "eng") {
+            setIsMalayalam(false)
+        } else {
+            setIsMalayalam(true)
+        }
+
+    }, [isMalayalam]);
 
     return (
         <>
-            <SEO pageTitle="Kerala Khadi - Details of the Khadi Institutions" />
-            <HeaderOne />
-            <BreadCrumb title="Details of the Khadi Institutions" innerTitle="Kerala Khadi & Village Industries Board" />
+            <SEO pageTitle={isMalayalam ? "കേരള ഖാദി - ഖാദി സ്ഥാപനങ്ങളുടെ വിശദാംശങ്ങൾ" : "Kerala Khadi - Details of the Khadi Institutions"} />
+            <HeaderOne isMalayalam={isMalayalam} />
+            <BreadCrumb title={isMalayalam ? "ഖാദി സ്ഥാപനങ്ങളുടെ വിശദാംശങ്ങൾ" : "Details of the Khadi Institutions"} innerTitle={isMalayalam ? "കേരള ഖാദി & വില്ലേജ് ഇൻഡസ്ട്രീസ് ബോർഡ്" : "Kerala Khadi & Village Industries Board"} />
 
             <div className="team__single section-padding">
                 <div className="container">
@@ -30,7 +45,7 @@ const KhadiInstitutions = () => {
                         <div className="col-xl-7 col-lg-7">
                             <div className="team__single-right">
                                 <div className="team__single-right-experience">
-                                    <h3>Details of the Khadi Institutions</h3>
+                                    <h3>{isMalayalam ? "ഖാദി സ്ഥാപനങ്ങളുടെ വിശദാംശങ്ങൾ" : "Details of the Khadi Institutions"}</h3>
                                     <br />
                                     <p>
                                         DETAILS OF THE KHADI INSTITUTIONS FINANCED BY THE BOARD
@@ -249,14 +264,17 @@ const KhadiInstitutions = () => {
                                             </tr>
                                         </tbody>
                                     </table>
+
+                                    <br />
+
+                                </div>
+
+
                             </div>
-
-
                         </div>
                     </div>
                 </div>
-            </div>
-        </div >
+            </div >
 
             <div className='all-footer'>
                 <FooterOne />
