@@ -12,22 +12,45 @@ const NewsTicker = ({ isMalayalam }) => {
     useEffect(() => {
         const accessToken = 'IGQWROSExGN2xxa2pKSExMLXJ5SXdEaXZAHM051QkNNVHoxY2E4TktYMEJiOGRTaXdrVzZAxZAmhsVWJZAektLYVVaNXR1OWVXX0VVVzhyZAXVJZATdzZAlZAybTNCcm1LdEplNWxfbE1tSTdac1d1TmpOSnByX2s1cU91ZA2cZD'; // Replace with your access token
         const userId = '54819600064'; // Replace with your Instagram user ID
-        const fetchInstagramPhotos = async () => {
+        const initializeInstagramFeed = async () => {
             try {
-                const response = await fetch(`https://graph.instagram.com/${userId}/media?fields=id,media_type,media_url,caption,permalink&access_token=${accessToken}`);
-                const data = await response.json();
-                setPhotos(data.data);
-            } catch (error) {
-                console.error('Error fetching Instagram photos:', error);
+                if (userId) {
+                    const mediaData = await fetchInstagramPhotos(userId, accessToken);
+                    setPhotos(mediaData);
+                } else {
+                    setLoading(false);
+                }
+            } catch (e) {
+                setLoading(false);
             } finally {
-                setLoading(false); // Set loading to false regardless of success or failure
+                setLoading(false);
             }
         };
 
-        fetchInstagramPhotos();
-    }, [photos, loading]);
+        initializeInstagramFeed();
+    }, [loading]);
 
-    console.log(photos);
+    const fetchInstagramPhotos = async (userId, accessToken) => {
+        let retries = 3;
+        while (retries > 0) {
+            try {
+                const response = await fetch(`https://graph.instagram.com/${userId}/media?fields=id,media_type,media_url,caption,permalink&access_token=${accessToken}`);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                return data.data;
+            } catch (error) {
+                console.error('Error fetching Instagram photos:', error);
+                if (retries === 1) {
+                    throw error;
+                }
+                retries -= 1;
+                await new Promise(resolve => setTimeout(resolve, 3000));
+            }
+        }
+    };
+
 
     return (
         <div className="news-ticker-container experience__area" style={{ display: 'flex' }}>

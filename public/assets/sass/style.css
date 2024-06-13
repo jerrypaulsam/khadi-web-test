@@ -4711,8 +4711,8 @@ Banner One CSS
 }
 .banner__one-content h1 {
   color: var(--text-white);
-  font-size: 45px;
-  line-height: 110px;
+  font-size: 40px;
+  line-height: 90px;
   margin-bottom: 40px;
   max-width: 650px;
 }
