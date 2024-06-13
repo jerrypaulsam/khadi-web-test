@@ -6,6 +6,7 @@ import logo from "../../../public/assets/img/logo-5.jpeg";
 import govLogo from "../../../public/assets/img/kerala-gov.png";
 import industriesLogo from "../../../public/assets/img/dept-of-indcomm.png";
 import CountUp from 'react-countup';
+import { toast } from "react-toastify";
 
 const FooterOne = ({ isMalayalam }) => {
 
@@ -67,7 +68,7 @@ const FooterOne = ({ isMalayalam }) => {
                                 <h4>Subscribe</h4>
                                 <div className="footer__one-widget-subscribe">
                                     <p>{isMalayalam ? "ഞങ്ങളുടെ ഇമെയിലുകൾ ലഭിക്കുന്ന " : "Join over "}<span>1,00,000</span> {isMalayalam ? "ആളുകളിൽ ചേരുക" : "people getting our emails"}</p>
-                                    <form action="#">
+                                    <form action="#" onSubmit={() => toast.success("Thank You for Subscribing! 😊")} >
                                         <input type="text" name="email" placeholder="Email Address" required />
                                         <button type="submit"><i className="fas fa-paper-plane"></i></button>
                                     </form>
