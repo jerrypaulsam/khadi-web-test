@@ -4,6 +4,7 @@ import "./globals.css";
 import SwitchTab from '@/components/pages/common/dark-light';
 import logo2 from "@/public/assets/img/logo-5.jpeg";
 import Head from 'next/head';
+import Script from 'next/script';
 
 
 export default function RootLayout({ children }) {
@@ -45,6 +46,9 @@ export default function RootLayout({ children }) {
                 <meta property="twitter:title" content={title} />
                 <meta property="twitter:description" content={description} />
                 <meta property="twitter:image" content={logo2} />
+
+                {/* <Script src="https://cdn.jsdelivr.net/npm/instafeed.js@2.0.0/dist/instafeed.min.js" /> */}
+
             </Head>
             
             <body>

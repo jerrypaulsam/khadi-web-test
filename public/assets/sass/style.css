@@ -4324,67 +4324,51 @@ Responsive Menu Css
   border-radius: 8px;
 }
 
-.news-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-right: 1px solid #ccc;
+.news-ticker-left-side, .news-ticker-right-side {
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.news-image img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: fill;
+.news-ticker-left-side {
+  background-color: #f4f4f4;
+  overflow: hidden;
 }
 
-.news-ticker {
-  flex: 2;
-  /* overflow: hidden; */
-  overflow-y: hidden; /* Add this line */
-  position: relative;
-  display: flex;
-  align-items: center;
-  /* background-color: #f9f9f9; */
-}
-
-.news-ticker {
-  overflow-y: auto;
-  position: relative;
+.news-ticker-right-side {
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 250px; /* Set a fixed height */
-  /* background-color: #f9f9f9; */
+  justify-content: center;
 }
 
-.news-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  animation: scroll 20s linear infinite;
+.instagram-loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px; /* Adjust height as needed */
 }
 
-.news-item {
-  padding: 20px;
-  /* border-bottom: 1px solid #ccc; */
-  width: 100%;
-  text-align: center;
+.instagram-loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
 }
 
-.news-ticker::-webkit-scrollbar {
-  width: 2px; /* Set the width of the scrollbar to 2px */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
-.news-ticker::-webkit-scrollbar-thumb {
-  background-color: #000; /* Set the color of the scrollbar thumb to black */
-  border-radius: 10px; /* Add a rounded corner to the scrollbar thumb */
-}
 
-.news-ticker::-webkit-scrollbar-track {
-  background-color: #f9f9f9; /* Set the color of the scrollbar track to match the background color */
+@media (max-width: 768px) {
+  .news-ticker-left-side, .news-ticker-right-side {
+      width: 100%;
+  }
 }
 
 @keyframes scroll {
@@ -10936,6 +10920,28 @@ Footer One CSS
 }
 .footer__one .border-one.tow {
   margin-left: -13px;
+}
+
+#instafeed {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  width: 100%;
+}
+
+#instafeed a {
+  display: block;
+}
+
+#instafeed img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+#instafeed img:hover {
+  transform: scale(1.05);
 }
 
 /*==========================================================================
