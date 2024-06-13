@@ -10,8 +10,8 @@ const NewsTicker = ({ isMalayalam }) => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const accessToken = 'IGQWROSExGN2xxa2pKSExMLXJ5SXdEaXZAHM051QkNNVHoxY2E4TktYMEJiOGRTaXdrVzZAxZAmhsVWJZAektLYVVaNXR1OWVXX0VVVzhyZAXVJZATdzZAlZAybTNCcm1LdEplNWxfbE1tSTdac1d1TmpOSnByX2s1cU91ZA2cZD'; // Replace with your access token
-        const userId = '54819600064'; // Replace with your Instagram user ID
+        const accessToken = process.env.NEXT_PUBLIC_INSTA_API;
+        const userId = '54819600064'; 
         const initializeInstagramFeed = async () => {
             try {
                 if (userId) {
