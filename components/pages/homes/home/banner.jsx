@@ -59,7 +59,7 @@ const BannerOne = ({ isMalayalam }) => {
                                 <div className="col-xl-12">
                                     <div className="banner__one-content"> 
                                         <span>{isMalayalam ? "കേരള ഖാദി" : "Kerala Khadi"}</span>
-                                        <h1>{isMalayalam ? "എല്ലാ തുണിത്തരങ്ങൾക്കും പിന്നിലെ കഥകൾ" : "Stories behind every fabric"}</h1>
+                                        <h1>{isMalayalam ? "നെയ്ത്തിനു പിന്നിലെ കഥകൾ" : "Stories behind every fabric"}</h1>
                                         <div className="banner__one-content-button">
                                             <div className="banner__one-content-button-item">
                                                 <Link className="btn-one" href={`/${isMalayalam ? "mal" : "en"}/about-us`}>{isMalayalam ? "കൂടുതൽ വായിക്കുക" : "Read More"}<i className="far fa-chevron-double-right"></i></Link>

@@ -24,7 +24,7 @@ const NewsTicker = ({ isMalayalam }) => {
                     style={{ backgroundColor: "#ccc", borderRadius: "8px" }}
                     pauseOnHover={true}
                     // loop={false}
-                    speed={20}
+                    speed={15}
 
                 >
                     &nbsp;&nbsp;<p style={{ color: "white" }}>⦾</p>&nbsp;
