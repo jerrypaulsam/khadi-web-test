@@ -68,7 +68,7 @@ const FooterOne = ({ isMalayalam }) => {
                                 <h4>Subscribe</h4>
                                 <div className="footer__one-widget-subscribe">
                                     <p>{isMalayalam ? "ഞങ്ങളുടെ ഇമെയിലുകൾ ലഭിക്കുന്ന " : "Join over "}<span>1,00,000</span> {isMalayalam ? "ആളുകളിൽ ചേരുക" : "people getting our emails"}</p>
-                                    <form action="#" onSubmit={() => toast.success("Thank You for Subscribing! 😊")} >
+                                    <form action="#" onSubmit={() => toast.success(isMalayalam ? "സബ്സ്ക്രൈബ് ചെയ്തതിന് നന്ദി! 😊" : "Thank You for Subscribing! 😊")} >
                                         <input type="text" name="email" placeholder="Email Address" required />
                                         <button type="submit"><i className="fas fa-paper-plane"></i></button>
                                     </form>
