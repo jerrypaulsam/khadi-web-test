@@ -4318,7 +4318,7 @@ Responsive Menu Css
   flex-wrap: wrap;
   /* max-width: 950px; */
   /* height: 200px; */
-  background-color: #ccc;
+  /* background-color: #ccc; */
   margin: 10px auto;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -4331,12 +4331,12 @@ Responsive Menu Css
 }
 
 .news-ticker-left-side {
-  background-color: #f4f4f4;
+  /* background-color: #f4f4f4; */
   overflow: hidden;
 }
 
 .news-ticker-right-side {
-  background-color: #fff;
+  /* background-color: #fff; */
   display: flex;
   flex-direction: column;
   align-items: center;

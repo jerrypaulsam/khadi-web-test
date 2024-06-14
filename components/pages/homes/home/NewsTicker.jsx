@@ -53,8 +53,8 @@ const NewsTicker = ({ isMalayalam }) => {
 
 
     return (
-        <div className="news-ticker-container experience__area" style={{ display: 'flex' }}>
-            <div className="news-ticker-left-side">
+        <div className="news-ticker-container about__one" style={{ display: 'flex' }}>
+            <div className="news-ticker-left-side ">
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }} >
                     <Marquee
                         style={{ backgroundColor: "#ccc", borderRadius: "8px", marginBottom: '10px' }}
@@ -80,7 +80,7 @@ const NewsTicker = ({ isMalayalam }) => {
                 </div>
             </div>
 
-            <div className="news-ticker-right-side" >
+            <div className="news-ticker-right-side about__one" >
                 <h6>{isMalayalam ? "ഇൻസ്റ്റാഗ്രാം ഫോട്ടോകൾ" : "Instagram Photos"}</h6>
                 {(photos != undefined && photos != null) || photos?.length === 0 ? <p style={{textAlign: "center", fontSize: "14px"}} >{isMalayalam ? "ഫോട്ടോകളൊന്നും കണ്ടെത്തിയില്ല" : "No photos found"}</p> : <p></p>}
                 {loading ? (

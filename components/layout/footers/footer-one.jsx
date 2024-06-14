@@ -33,14 +33,17 @@ const FooterOne = ({ isMalayalam }) => {
                                 <div className="footer__one-widget-solution">
                                     <ul>
                                         <li><Link href={`/${isMalayalam ? "mal" : "en"}/tender-notice`}><i className="far fa-chevron-double-right"></i>{isMalayalam ? "ദർഘാസുകൾ" : "Tender Notice"}</Link></li>
-                                        <li><Link href={`#`}><i className="far fa-chevron-double-right"></i>{isMalayalam ? "ഡൗൺലോഡുകൾ" : "Downloads"}</Link></li>
+                                        {/* <li><Link href={`#`}><i className="far fa-chevron-double-right"></i>{isMalayalam ? "ഡൗൺലോഡുകൾ" : "Downloads"}</Link></li> */}
                                         <li><Link href={`#`}><i className="far fa-chevron-double-right"></i>{isMalayalam ? "നിയമവും ചട്ടങ്ങളും" : "Acts & Rules"}</Link></li>
                                         <li><Link href={`/${isMalayalam ? "mal" : "en"}/gallery`}><i className="far fa-chevron-double-right"></i>{isMalayalam ? "ഫോട്ടോ  ഗാലറി" : "Photo Gallery"}</Link></li>
+                                        <li><Link href={`/${isMalayalam ? "mal" : "en"}/terms-and-conditions`}><i className="far fa-chevron-double-right"></i>{isMalayalam ? "നിബന്ധനകളും വ്യവസ്ഥകളും" : "Terms & Conditions"}</Link></li>
+                                        <li><Link href={`/${isMalayalam ? "mal" : "en"}/privacy-policy`}><i className="far fa-chevron-double-right"></i>{isMalayalam ? "സ്വകാര്യതാ നയം" : "Privacy Policy"}</Link></li>
                                         <li><Link href={`/${isMalayalam ? "mal" : "en"}/contact`}><i className="far fa-chevron-double-right"></i>{isMalayalam ? "ബന്ധപ്പെടുക" : "Contact Us"}</Link></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
+                        
                         <div className="col-xl-3 col-md-6 col-sm-6 sm-mb-30">
                             <div className="footer__one-widget border-one">
                                 <h4>Head Office</h4>
