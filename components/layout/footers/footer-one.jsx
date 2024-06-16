@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Social from "@/components/data/social";
 import Link from "next/link";
 import logo from "../../../public/assets/img/logo-5.jpeg";
@@ -8,11 +8,24 @@ import govLogo from "../../../public/assets/img/kerala-gov.png";
 import industriesLogo from "../../../public/assets/img/dept-of-indcomm.png";
 import CountUp from 'react-countup';
 import { toast } from "react-toastify";
-import { subscriptionEmail } from '@/api/api_calls';
+import { getVisitorCount, subscriptionEmail } from '@/api/api_calls';
 
 const FooterOne = ({ isMalayalam }) => {
 
     const [isSubButtonClicked, setIsSubButtonClicked] = useState(false);
+    const [visitorCount, setVisitorCount] = useState(2580);
+
+    useEffect(() => {
+        fetchData();
+
+    }, []);
+
+    async function fetchData() {
+
+        const count = await getVisitorCount();
+        setVisitorCount(count);
+
+    }
 
 
     async function handleSubscriptionForm(e) {
@@ -110,7 +123,7 @@ const FooterOne = ({ isMalayalam }) => {
                                     <h5 style={{ color: "white", fontSize: "15px", textAlign: "center" }}>{isMalayalam ? "സന്ദർശകരുടെ എണ്ണം" : "Visitors Count"}</h5>
                                     <p style={{ color: "white", fontSize: "14px", textAlign: "center" }}>
                                         <CountUp
-                                            end={10000}
+                                            end={visitorCount}
                                             enableScrollSpy
                                         />+
                                     </p>
