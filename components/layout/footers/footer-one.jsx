@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react';
 import Social from "@/components/data/social";
 import Link from "next/link";
 import logo from "../../../public/assets/img/logo-5.jpeg";
@@ -7,8 +8,29 @@ import govLogo from "../../../public/assets/img/kerala-gov.png";
 import industriesLogo from "../../../public/assets/img/dept-of-indcomm.png";
 import CountUp from 'react-countup';
 import { toast } from "react-toastify";
+import { subscriptionEmail } from '@/api/api_calls';
 
 const FooterOne = ({ isMalayalam }) => {
+
+    const [isSubButtonClicked, setIsSubButtonClicked] = useState(false);
+
+
+    async function handleSubscriptionForm(e) {
+        e.preventDefault();
+        const form = e.currentTarget;
+        const formData = new FormData(form);
+        setIsSubButtonClicked(true);
+        const email = formData.get("email")
+        await subscriptionEmail(email).then((value) => {
+            form.reset();
+            if (value == 200 || value == 201) {
+                toast.success("Hurray! Thank You For Subscribing.")
+            } else {
+                toast.info("Already Subscribed")
+            }
+        })
+
+    }
 
     return (
         <>
@@ -71,12 +93,9 @@ const FooterOne = ({ isMalayalam }) => {
                                 <h4>Subscribe</h4>
                                 <div className="footer__one-widget-subscribe">
                                     <p>{isMalayalam ? "ഞങ്ങളുടെ ഇമെയിലുകൾ ലഭിക്കുന്ന " : "Join over "}<span>1,00,000</span> {isMalayalam ? "ആളുകളിൽ ചേരുക" : "people getting our emails"}</p>
-                                    <form onSubmit={(e) => {
-                                        e.preventDefault();
-                                        toast.success(isMalayalam ? "സബ്സ്ക്രൈബ് ചെയ്തതിന് നന്ദി! 😊" : "Thank You for Subscribing! 😊");
-                                    }}>
+                                    <form method="post" onSubmit={handleSubscriptionForm}>
                                         <input type="text" name="email" placeholder="Email Address" required />
-                                        <button type="submit"><i className="fas fa-paper-plane"></i></button>
+                                        <button type="submit" disabled={isSubButtonClicked}><i className="fas fa-paper-plane"></i></button>
                                     </form>
                                 </div>
 

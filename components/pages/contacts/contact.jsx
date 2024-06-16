@@ -1,11 +1,37 @@
 "use client"
+import { useState } from 'react';
+
 import SEO from "@/components/data/seo";
 import HeaderOne from "@/components/layout/headers/header-one";
 import BreadCrumb from "../common/breadcrumb";
 import ScrollToTop from "../common/scroll/scroll-to-top";
 import FooterOne from "@/components/layout/footers/footer-one";
+import { contactFormAPI } from '@/api/api_calls';
+import { toast } from 'react-toastify';
 
 const ContactUs = () => {
+
+    const [contactButtonClicked, setContactButtonClicked] = useState(false);
+
+    async function handleContactFormSubmit(e) {
+        e.preventDefault();
+        setContactButtonClicked(true);
+        const form = e.currentTarget;
+        const formData = new FormData(form);
+        const email = formData.get("email");
+        const name = formData.get("name");
+        const message = formData.get("message");
+
+        await contactFormAPI(name, email, message).then((value) => {
+            if (value === "Success") {
+                form.reset();
+                toast.success("Thank You! Message Received")
+            } else {
+                toast.error("Please try later!")
+            }
+        })
+    }
+
     return (
         <>
             <SEO pageTitle="Khadi Board - Contact Us" />
@@ -17,7 +43,7 @@ const ContactUs = () => {
                         <div className="col-xl-5 col-lg-5 order-last order-lg-first">
                             <div className="contact__page-form">
                                 <h3 className="mb-30">Contact Us</h3>
-                                <form action="#" >
+                                <form method="post" onSubmit={handleContactFormSubmit} >
                                     <div className="row">
                                         <div className="col-sm-12 mb-20">
                                             <div className="contact__page-form-item contact-item">
@@ -34,12 +60,12 @@ const ContactUs = () => {
                                         <div className="col-sm-12 mb-30">
                                             <div className="contact__page-form-item contact-item">
                                                 <span className="far fa-comments"></span>
-                                                <textarea name="message" placeholder="Type your comments...."></textarea>
+                                                <textarea name="message" placeholder="Type your comments...." required="required"></textarea>
                                             </div>
                                         </div>
                                         <div className="col-lg-12">
                                             <div className="contact__page-form-item">
-                                                <button className="btn-one" type="submit">Submit Now<i className="far fa-chevron-double-right"></i></button>
+                                                <button className="btn-one" disabled={contactButtonClicked} type="submit">Submit Now<i className="far fa-chevron-double-right"></i></button>
                                             </div>
                                         </div>
                                     </div>

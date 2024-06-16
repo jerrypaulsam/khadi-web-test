@@ -12,7 +12,6 @@ import logo2 from "../../../public/assets/img/logo-5.jpeg";
 import g20Logo from "../../../public/assets/img/g20_1.png";
 import LanguageTab from '@/components/pages/common/language-change';
 
-
 const HeaderOne = ({ isMalayalam, variant }) => {
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const [menuSidebar, setMenuSidebar] = useState(false);

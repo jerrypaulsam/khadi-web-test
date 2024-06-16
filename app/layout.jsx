@@ -6,6 +6,9 @@ import logo2 from "@/public/assets/img/logo-5.jpeg";
 import Head from 'next/head';
 import Script from 'next/script';
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 export default function RootLayout({ children }) {
     useEffect(() => {
@@ -54,6 +57,9 @@ export default function RootLayout({ children }) {
             <body>
                 <SwitchTab />
                 {children}
+
+                <ToastContainer />
+
             </body>
         </html>
     );
