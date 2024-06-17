@@ -1,3 +1,7 @@
+'use client'
+
+import { useEffect, useState } from 'react';
+
 import Link from "next/link";
 import SEO from "@/components/data/seo";
 import HeaderOne from "@/components/layout/headers/header-one";
@@ -8,11 +12,22 @@ import ScrollToTop from "@/components/pages/common/scroll/scroll-to-top";
 import image1 from "@/public/assets/img/about/objectives.jpg";
 
 const EmploymentGenerationProgram = () => {
+    const [isMalayalam, setIsMalayalam] = useState(false);
+
+    useEffect(() => {
+        let language = localStorage.getItem("language");
+        if ((language === null && language === undefined) || language === "eng") {
+            setIsMalayalam(false)
+        } else {
+            setIsMalayalam(true)
+        }
+
+    }, [isMalayalam]);
 
     return (
         <>
             <SEO pageTitle="Kerala Khadi - Special Employment Generation Programme" />
-            <HeaderOne />
+            <HeaderOne isMalayalam={isMalayalam} />
             <BreadCrumb title="Special Employment Generation Programme" innerTitle="Kerala Khadi" />
 
             <div className="team__single section-padding">
@@ -137,7 +152,7 @@ const EmploymentGenerationProgram = () => {
             </div>
 
             <div className='all-footer'>
-                <FooterOne />
+                <FooterOne isMalayalam={isMalayalam} />
             </div>
             <ScrollToTop />
         </>

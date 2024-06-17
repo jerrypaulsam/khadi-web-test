@@ -20,6 +20,17 @@ const BaseUrl = {
 
 }
 
+export async function getScrollText() {
+  const res = await fetch(`${BaseUrl}base/scroll_text/`);
+
+  if (res.status != 200) {
+      return "Error";
+  } else {
+      const text = await res.json();
+      return text.results;
+  }
+}
+
 export async function getNewsBoard() {
   const res = await fetch(`${BaseUrl}base/news_board/`);
 
@@ -27,9 +38,7 @@ export async function getNewsBoard() {
       return "Error";
   } else {
       const news = await res.json();
-      // console.log(visitor_count['visitor_cnt']);
-
-      return news;
+      return news.results;
   }
 }
 
@@ -40,9 +49,7 @@ export async function getKhadiSchemes() {
       return "Error";
   } else {
       const schemes = await res.json();
-      // console.log(visitor_count['visitor_cnt']);
-
-      return schemes;
+      return schemes.results;
   }
 }
 
@@ -53,9 +60,8 @@ export async function getSneakPeaks() {
       return "Error";
   } else {
       const sneaks = await res.json();
-      // console.log(visitor_count['visitor_cnt']);
 
-      return sneaks;
+      return sneaks.results;
   }
 }
 
@@ -68,20 +74,18 @@ export async function getAlbums() {
       const albums = await res.json();
       // console.log(visitor_count['visitor_cnt']);
 
-      return albums;
+      return albums.results;
   }
 }
 
 export async function getAlbumPhotos(slug) {
   const res = await fetch(`${BaseUrl}base/khadi_photos/${slug}/photos/`);
-
+  
   if (res.status != 200) {
       return "Error";
   } else {
       const photos = await res.json();
-      // console.log(visitor_count['visitor_cnt']);
-
-      return photos;
+      return photos.results;
   }
 }
 

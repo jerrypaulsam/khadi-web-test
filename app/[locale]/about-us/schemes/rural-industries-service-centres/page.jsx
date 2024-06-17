@@ -1,3 +1,7 @@
+'use client'
+
+import { useEffect, useState } from 'react';
+
 import Link from "next/link";
 import SEO from "@/components/data/seo";
 import HeaderOne from "@/components/layout/headers/header-one";
@@ -9,10 +13,22 @@ import image1 from "@/public/assets/img/about/objectives.jpg";
 
 const RuralISC = () => {
 
+    const [isMalayalam, setIsMalayalam] = useState(false);
+
+    useEffect(() => {
+        let language = localStorage.getItem("language");
+        if ((language === null && language === undefined) || language === "eng") {
+            setIsMalayalam(false)
+        } else {
+            setIsMalayalam(true)
+        }
+
+    }, [isMalayalam]);
+
     return (
         <>
             <SEO pageTitle="Kerala Khadi - Rural Industries Service Centres (RISC)" />
-            <HeaderOne />
+            <HeaderOne isMalayalam={isMalayalam} />
             <BreadCrumb title="Rural Industries Service Centres (RISC)" innerTitle="Kerala Khadi & Village Industries Board" />
 
             <div className="team__single section-padding">
@@ -50,7 +66,7 @@ const RuralISC = () => {
             </div>
 
             <div className='all-footer'>
-                <FooterOne />
+                <FooterOne isMalayalam={isMalayalam} />
             </div>
             <ScrollToTop />
         </>

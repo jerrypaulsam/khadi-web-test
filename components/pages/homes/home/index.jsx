@@ -16,12 +16,15 @@ import ScrollToTop from "../../common/scroll/scroll-to-top";
 import { useEffect, useState } from 'react';
 import Marquee from "react-fast-marquee";
 import NewsTicker from "./NewsTicker";
+import { getScrollText } from "@/api/api_calls";
 
 
 
 const HomeOne = () => {
 
     const [isMalayalam, setIsMalayalam] = useState(false);
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         let language = localStorage.getItem("language");
@@ -31,20 +34,46 @@ const HomeOne = () => {
             setIsMalayalam(true)
         }
 
+        fetchData();
+
     }, [isMalayalam]);
+
+    async function fetchData() {
+
+        const scroll = await getScrollText();
+        if (scroll != null && scroll != []) {
+            setData(scroll);
+        }
+
+        setLoading(false);
+    }
+
     return (
         <div>
             <SEO pageTitle='Kerala Khadi & Village Industries Board' />
-            <Marquee
-                style={{ backgroundColor: "#000", }}
-                pauseOnHover={true}
+            {data === null && data.length === 0 ? null :
+                <Marquee
+                    style={{ backgroundColor: "#000", }}
+                    pauseOnHover={true}
 
-            >
-                &nbsp;&nbsp;<p style={{color: "white"}}>⦾</p>&nbsp;
-                <a href="#download-app" style={{ color: "#fff" }}>{isMalayalam ? "ജൂൺ 15 വരെ ഖാദി വസ്ത്രങ്ങൾക്ക് 30% കിഴിവ്. ഖാദി ഷോറൂമുകൾ സന്ദർശിക്കൂ!" : "30% Rebate on Khadi Clothes until 15th June. Visit Khadi Showrooms!"}</a>
+                >
+                    &nbsp;&nbsp;<p style={{ color: "white" }}>⦾</p>&nbsp;
+                    <a href="#download-app" style={{ color: "#fff" }}>{isMalayalam ? data[0]?.scroll_mal_1 : data[0]?.scroll_en_1}</a>
+                    &nbsp;&nbsp;
+
+                    {data[0]?.scroll_en_2 !== null && data[0]?.scroll_en_2 !== "" ? (
+                        <>
+                            <p style={{ color: "white" }}>⦾&nbsp;</p>
+                            <a href="#download-app" style={{ color: "#fff" }}>
+                                {isMalayalam ? data[0]?.scroll_mal_2 : data[0]?.scroll_en_2}
+                            </a>
+                        </>
+                    ) : null}
 
 
-            </Marquee>
+                </Marquee>
+            }
+
 
             <HeaderOne isMalayalam={isMalayalam} />
             <BannerOne isMalayalam={isMalayalam} />

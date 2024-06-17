@@ -1,3 +1,7 @@
+'use client'
+
+import { useEffect, useState } from 'react';
+
 import Link from "next/link";
 import SEO from "@/components/data/seo";
 import HeaderOne from "@/components/layout/headers/header-one";
@@ -9,10 +13,22 @@ import image1 from "@/public/assets/img/about/objectives.jpg";
 
 const SFRUTI = () => {
 
+    const [isMalayalam, setIsMalayalam] = useState(false);
+
+    useEffect(() => {
+        let language = localStorage.getItem("language");
+        if ((language === null && language === undefined) || language === "eng") {
+            setIsMalayalam(false)
+        } else {
+            setIsMalayalam(true)
+        }
+
+    }, [isMalayalam]);
+
     return (
         <>
             <SEO pageTitle="Scheme of Fund for Regeneration of Traditional Industries (SFRUTI)" />
-            <HeaderOne />
+            <HeaderOne isMalayalam={isMalayalam} />
             <BreadCrumb title="Scheme of Fund for Regeneration of Traditional Industries (SFRUTI)" innerTitle="Kerala Khadi & Village Industries Board" />
 
             <div className="team__single section-padding">
@@ -51,7 +67,7 @@ const SFRUTI = () => {
             </div>
 
             <div className='all-footer'>
-                <FooterOne />
+                <FooterOne isMalayalam={isMalayalam} />
             </div>
             <ScrollToTop />
         </>

@@ -1,3 +1,7 @@
+'use client'
+
+import { useEffect, useState } from 'react';
+
 import Link from "next/link";
 import SEO from "@/components/data/seo";
 import HeaderOne from "@/components/layout/headers/header-one";
@@ -9,10 +13,22 @@ import image1 from "@/public/assets/img/about/objectives.jpg";
 
 const InsuranceScheme = () => {
 
+    const [isMalayalam, setIsMalayalam] = useState(false);
+
+    useEffect(() => {
+        let language = localStorage.getItem("language");
+        if ((language === null && language === undefined) || language === "eng") {
+            setIsMalayalam(false)
+        } else {
+            setIsMalayalam(true)
+        }
+
+    }, [isMalayalam]);
+
     return (
         <>
             <SEO pageTitle="Kerala Khadi - Insurance Scheme" />
-            <HeaderOne />
+            <HeaderOne isMalayalam={isMalayalam} />
             <BreadCrumb title="Insurance Scheme" innerTitle="Insurance Scheme of Khadi Artisans" />
 
             <div className="team__single section-padding">
@@ -66,7 +82,7 @@ const InsuranceScheme = () => {
             </div>
 
             <div className='all-footer'>
-                <FooterOne />
+                <FooterOne isMalayalam={isMalayalam} />
             </div>
             <ScrollToTop />
         </>

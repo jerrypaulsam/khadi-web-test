@@ -4,14 +4,19 @@ import Marquee from "react-fast-marquee";
 import Count from "../../common/count";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { getNewsBoard } from "@/api/api_calls";
 
 const NewsTicker = ({ isMalayalam }) => {
     const [photos, setPhotos] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [data, setData] = useState([]);
+    const [newsLoading, setNewsLoading] = useState(true);
 
     useEffect(() => {
+        fetchData();
+
         const accessToken = process.env.NEXT_PUBLIC_INSTA_API;
-        const userId = '54819600064'; 
+        const userId = '54819600064';
         const initializeInstagramFeed = async () => {
             try {
                 if (userId) {
@@ -29,6 +34,16 @@ const NewsTicker = ({ isMalayalam }) => {
 
         initializeInstagramFeed();
     }, [loading]);
+
+    async function fetchData() {
+
+        const news = await getNewsBoard();
+        if (news != null && news != []) {
+            setData(news);
+        }
+
+        setNewsLoading(false);
+    }
 
     const fetchInstagramPhotos = async (userId, accessToken) => {
         let retries = 3;
@@ -56,18 +71,29 @@ const NewsTicker = ({ isMalayalam }) => {
         <div className="news-ticker-container about__one" style={{ display: 'flex' }}>
             <div className="news-ticker-left-side ">
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }} >
-                    <Marquee
-                        style={{ backgroundColor: "#ccc", borderRadius: "8px", marginBottom: '10px' }}
-                        pauseOnHover={true}
-                        speed={15}
-                    >
-                        &nbsp;&nbsp;<p style={{ color: "white" }}>⦾</p>&nbsp;
-                        <a href="#download-app" style={{ color: "#000" }}>
-                            {isMalayalam ? "പൊതുമരാമത്ത് വകുപ്പിൻ്റെ അല്ലെങ്കിൽ മറ്റ് സർക്കാരിൻ്റെ രജിസ്റ്റർ ചെയ്ത കരാറുകാരിൽ നിന്ന് സീൽ ചെയ്ത ക്വട്ടേഷനുകൾ ക്ഷണിക്കുന്നു. മലപ്പുറം ഖാദി ഉൽപ്പാദന യൂണിറ്റിൻ്റെ പരിപാലനത്തിനുള്ള വകുപ്പ്" : "Sealed quotations are invited from registered contractors of public work department or other Govt. department for the maintenance work of Khadi production unit Malapuram"}
-                        </a>
-                    </Marquee>
+                    {newsLoading
+                        ? (
+                            <div className="instagram-loader-container">
+                                <div className="instagram-loader"></div>
+                            </div>
 
-                    <Marquee
+                        ) : data !== null && data.length > 0 && data?.map((item, id) => (
+                                <Marquee key={id}
+                                    style={{ backgroundColor: "#ccc", borderRadius: "8px", marginBottom: '10px' }}
+                                    pauseOnHover={true}
+                                    speed={15}
+                                >
+                                    &nbsp;&nbsp;<p style={{ color: "white" }}>⦾</p>&nbsp;
+                                    <a href={(item.file === null && item.file === "") ? item.link != "" ? item.link : "#" : item.file} style={{ color: "#000" }}>
+                                        <strong style={{color: "red"}}>{isMalayalam ? item.title_mal : item.title_en}: </strong>{isMalayalam ? item.mess_mal : item.mess_en}
+                                    </a>
+                                </Marquee>
+                            )) 
+
+                     }
+
+
+                    {/* <Marquee
                         style={{ backgroundColor: "#ccc", borderRadius: "8px" }}
                         pauseOnHover={true}
                         speed={20}
@@ -76,21 +102,21 @@ const NewsTicker = ({ isMalayalam }) => {
                         <a href="#download-app" style={{ color: "#000" }}>
                             {isMalayalam ? "എൻ്റെ ഗ്രാമം പദ്ധതിയുടെ പുതുക്കിയ മാര്‍ഗരേഖ" : "Updated Guidelines for Ente Gramam Scheme"}
                         </a>
-                    </Marquee>
+                    </Marquee> */}
                 </div>
             </div>
 
             <div className="news-ticker-right-side about__one" >
                 <h6>{isMalayalam ? "ഇൻസ്റ്റാഗ്രാം ഫോട്ടോകൾ" : "Instagram Photos"}</h6>
-                {(photos != undefined && photos != null) || photos?.length === 0 ? <p style={{textAlign: "center", fontSize: "14px"}} >{isMalayalam ? "ഫോട്ടോകളൊന്നും കണ്ടെത്തിയില്ല" : "No photos found"}</p> : <p></p>}
+                {(photos != undefined && photos != null) || photos?.length === 0 ? <p style={{ textAlign: "center", fontSize: "14px" }} >{isMalayalam ? "ഫോട്ടോകളൊന്നും കണ്ടെത്തിയില്ല" : "No photos found"}</p> : <p></p>}
                 {loading ? (
                     <div className="instagram-loader-container">
                         <div className="instagram-loader"></div>
                     </div>
                 ) : (
-                    <div id="instafeed"> 
-                        {(photos != undefined && photos != null) || photos?.length === 0  ? (
-                            <p style={{textAlign: "right"}} ></p>
+                    <div id="instafeed">
+                        {(photos != undefined && photos != null) || photos?.length === 0 ? (
+                            <p style={{ textAlign: "right" }} ></p>
                         ) : (
                             photos?.map(photo => (
                                 <a key={photo.id} href={photo.permalink} target="_blank" rel="noopener noreferrer">
