@@ -100,7 +100,7 @@ export async function getImportantOfficials() {
       const officials = await res.json();
       // console.log(visitor_count['visitor_cnt']);
 
-      return officials;
+      return officials.results;
   }
 }
 
@@ -113,7 +113,7 @@ export async function getProjectOfficials() {
       const officials = await res.json();
       // console.log(visitor_count['visitor_cnt']);
 
-      return officials;
+      return officials.results;
   }
 }
 
@@ -126,7 +126,7 @@ export async function getTenderNotices() {
       const notices = await res.json();
       // console.log(visitor_count['visitor_cnt']);
 
-      return notices;
+      return notices.results;
   }
 }
 
